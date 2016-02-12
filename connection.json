@@ -1,0 +1,19 @@
+{
+	"connection": [
+		{
+			"name": "Mike",
+			"last-seen": "1/27/16",
+      "goal": "2 weeks"
+		},
+		{
+      "name": "Deb",
+      "last-seen": "2/1/16",
+      "goal": "2 weeks"
+		},
+		{
+      "name": "Viv",
+      "last-seen": "2/3/16",
+      "goal": "10 days"
+		}
+	]
+}

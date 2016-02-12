@@ -1,0 +1,97 @@
+ body  {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+
+
+ul {
+  list-style-type: none;
+}
+.page-links ul li {
+  display: block;
+  margin-top: 50px;
+  width: 300px;
+}
+#page-links p {
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  border: 1px solid black;
+  width: 200px;
+  border-radius:15px;
+
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+}
+
+.btn-group {
+  margin-top:25px;
+}
+
+.points {
+  background-color: grey;
+  width:50%;
+  color:white;
+}
+
+.panel-group {
+  margin-top:50px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.new-goal-button {
+  float: right;
+  margin-right:10px;
+}
+
+#calendar {
+  z-index:1;
+  position:absolute;
+}
+
+#dialog {
+  background-color:red;
+  z-index:1000000;
+  width: 250px;
+  height: 400px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -125px;
+  padding: 30px;
+  border-radius: 7px;
+}
+
+.event-time .container {
+  /* this is still not working!!*/
+  width: 350px;
+}
+
+.level-container {
+  margin: 0 auto;
+  margin-top:50px;
+  width: 70%;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.level-title {
+  display: inline-block;
+
+}
+
+.level-selector {
+  display: inline-block;
+}
+
+.activity-section{
+  margin-top:50px;
+  margin-bottom:50px;
+}

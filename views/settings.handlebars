@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Butterfly | Meet New People</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="style.css"
+  <!-- Latest compiled and minified JavaScript -->
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <script type="text/javascript">
+  function showAlert(){
+    if($("#myAlert").find("div#myAlert2").length==0){
+      $("#myAlert").append("<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Your calendar has been synced.</div>");
+    }
+    $("#myAlert").css("display", "");
+  }
+  </script>
+
+
+  <style>
+  .modal-header, h4, .close {
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size: 20px;
+  }
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Settings</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="meetNewPeople" data-ignore="push"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Meet New People<span class="sr-only"></span></a></li>
+          <li><a href="connect" data-ignore="push"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Connect With Friends</a></li>
+          <li><a href="events" data-ignore="push"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>
+          <li class="active"><a href="#"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
+          <li><a href="faq" data-ignore="push"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Page content-->
+    <h3>Services</h3>
+    <div class="card">
+      <ul class="table-view">
+        <li class="table-view-cell">
+          <a class="navigate-right">
+            Google Calendar
+            <button type="button" class="btn btn-secondary" value="showAlert" onclick="showAlert();"> Sync now</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  <div class="container" style="display:none;" id="myAlert">
+    <div class="alert alert-danger alert-dismissable" id="myAlert2">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      Your Google+ account is not connected. <a href="login.html" class="alert-link">Sign in now.</a>
+    </div>
+  </div>
+
+  <hr></hr>
+
+  <h3>Edit Profile</h3>
+  <div class="card">
+   <ul class="table-view">
+    <li class="table-view-cell">
+     <div class="input-row">
+       <label>Name</label>
+       <input type="text" placeholder="Shay Pearson">
+     </div>
+   </li>
+
+   <li class="table-view-cell">
+     <div class="input-row">
+       <label>Username</label>
+       <input type="text" placeholder="sp2016">
+     </div>
+   </li>
+
+   <li class="table-view-cell">
+    <div class="input-row">
+      <label>Email</label>
+      <input type="email" placeholder="spearson@gmail.com">
+    </div>
+  </li>
+
+</ul>
+</div>
+</div>
+
+<hr></hr>
+
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-primary btn-block" id="myBtn">Save settings</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4> Wait! </h4>
+        </div>
+        <div class="modal-body">
+         Are you sure you want to save your changes?
+       </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Don't save</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<br></br>
+
+<!-- Logout button -->
+<div class="container">
+  <form action="/">
+    <button class="btn btn-warning btn-block">Log out</button>
+  </form>
+</div>
+
+<!--Script for the modal pop-up-->
+<script>
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+</script>
+
+<br></br>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

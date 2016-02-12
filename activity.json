@@ -1,0 +1,20 @@
+{
+  "activity": [{
+    "level": "Easy",
+    "descriptions": [{
+      "name": "Wave hello at someone"
+    }, {
+      "name": "Say hi to your neighbor"
+    }, {
+      "name": "Compliment a stranger"
+    }]
+  }, {
+    "level": "Medium",
+    "descriptions": [{
+      "name": ""
+    }]
+  }, {
+    "level": "Hard",
+    "descriptions": []
+  }]
+}
