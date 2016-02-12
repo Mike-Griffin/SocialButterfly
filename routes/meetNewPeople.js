@@ -1,12 +1,7 @@
 var data = require("../activity.json");
 
 exports.view = function(req, res) {
-  var copy = data;
-  copy.helpers = {
-    foo: function(str) {
-      console.log(str);
-    }
-  }
+
 
   var difficulty = req.query['level-difficulty'];
   var desc = req.query.ActivityDescription;

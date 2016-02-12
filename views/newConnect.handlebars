@@ -30,45 +30,41 @@
   <br></br>
   <br></br>
 
+  <form action="connect">
   <div class="name-container" align="center">
-    <form>
-      Name of Friend: <input type="text" name="NameOfFriend">
-    </form>
+      Name of Friend: <input type="text" name="friend">
     </div>
 
   <div class="last-seen" align="center">
-    <form>
-      Haven't seen since: <input type="date" name="DateLastSeen">
-    </form>
+      Haven't seen since: <input type="date" name="date">
   </div>
 
 <div class ="goal-container" align="center">
   <label for="Day-settings">
     Goal to see every:
-    <select name="goal-setting">
-        <option value="01">01</option>
-        <option value="02">02</option>
-        <option value="03">03</option>
-        <option value="04">04</option>
-        <option value="05">05</option>
-        <option value="06">06</option>
-        <option value="07">07</option>
-        <option value="08">08</option>
-        <option value="09">09</option>
+    <select name="num">
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
         <option value="10">10</option>
     </select>
   </label>
   <label for="DWM-settings">
-    <select name="weekly-monthly-setting">
-      <option value="daily">Day(s)</option>
-      <option value="weekly">Week(s)</option>
-      <option value="monthly">Month(s)</option>
+    <select name="time">
+      <option value="day">Day(s)</option>
+      <option value="week">Week(s)</option>
+      <option value="month">Month(s)</option>
     </select>
   </label>
 </div>
 
    <div class="card" align="center">
-    <form action="connect">
       <input class="btn btn-primary" type="submit" value="Save Changes">
     </form>
 
