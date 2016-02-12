@@ -56,7 +56,7 @@ a {
 }
 
 #dialog {
-  background-color:red;
+  background-color: #b7b7b7;
   z-index:1000000;
   width: 250px;
   height: 400px;
@@ -71,7 +71,6 @@ a {
 
 .event-time .container {
   /* this is still not working!!*/
-  width: 350px;
 }
 
 .level-container {
