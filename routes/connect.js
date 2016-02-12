@@ -13,7 +13,6 @@ exports.view = function(req, res){
 
   var id =  Math.floor((Math.random() * 10000) + 1);
 
-  console.log(id);
 
   if (name !== undefined && date !== undefined && num !== undefined &&
         period !== undefined) {
