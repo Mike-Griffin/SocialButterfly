@@ -15,7 +15,7 @@ $(document).ready(function () {
     day[0] = daySource;
 
     var monthSource = new Object();
-    monthSource.title = 'MONTH'; // this should be string
+    monthSource.title = 'Concert'; // this should be string
     monthSource.start = new Date(y, m, d); // this should be date object
     monthSource.end = new Date(y, m, d);
 

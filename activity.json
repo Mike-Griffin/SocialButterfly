@@ -11,10 +11,18 @@
   }, {
     "level": "Medium",
     "descriptions": [{
-      "name": ""
-    }]
+      "name": "Go to a club meeting"
+    }, {
+      "name": "Start a conversation on the bus"
+      }]
   }, {
     "level": "Hard",
-    "descriptions": []
+    "descriptions": [{
+        "name": "Ask for someone's phone number"
+      }, {
+        "name": "Sing karoake"
+        }, {
+          "name": "Meet someone new in an unfamiliar place"
+          }]
   }]
 }
