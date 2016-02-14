@@ -16,3 +16,4 @@ exports.view = function(req, res) {
   console.log(JSON.stringify(data));
   res.render('meetNewPeople', data);
 };
+

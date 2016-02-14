@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Butterfly | New Activity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="newActivity.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- Include the compiled Ratchet CSS -->
+  <link href="css/ratchet.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="bar bar-nav">
+    <a href="meetNewPeople.html" data-ignore="push" class="icon icon-left-nav pull-left"></a>
+    <h1 class="title">Edit Activity</h1>
+  </header>
+
+  <div class="level-container" align="center">
+    <div class="level-title">
+      <p>Level</p>
+    </div>
+    <div class="level-selector" form="levelform">
+      <select name="level-difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="activity-section" align="center">
+    <p>Activity</p>
+    <textarea name="ActivityDescription" rows="3"></textarea>
+  </div>
+  <div class="card" align="center">
+    <form action="meetNewPeople.html">
+      <input class="btn btn-primary" type="submit" value="Add Activity">
+    </form>
+
+  </div>
+  <!-- Include the compiled Ratchet JS -->
+  <script src="js/ratchet.min.js"></script>
+</body>
+
+</html>
