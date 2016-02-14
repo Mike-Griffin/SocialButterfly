@@ -44,9 +44,14 @@
   </nav>
 
   <hr></hr>
-  <button class="btn btn-primary btn-block">
+  <div class="container">
+    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
+      <span class="glyphicon glyphicon-plus"></span> Add New Connection 
+    </button>
+  </div>
+  <!--<button class="btn btn-primary btn-block">
     <a href="newConnect" class="btn btn-primary" data-ignore="push"><i class="fa fa-plus"> Add new friend </i></a>
-  </button>
+  </button>-->
   <hr></hr>
 
 
@@ -63,16 +68,14 @@
           <li class="list-group-item"><p>Haven't seen since</p>
                                       {{last-seen}}</li>
           <li class="list-group-item"><p>Goal is to see every {{goal}}</p>
+            <button href="editConnectModal" class="btn btn-primary"> Edit </button>
+            <button class="btn btn-danger"> Delete </button>
           </li>
         </ul>
       </div>
       {{/each}}
-          <button class="btn btn-primary"> Edit </button>
-          <button class="btn btn-danger"> Delete </button>
     </div>
   </div>
-
-  <a href="editConnectModal" class="btn btn-primary"> Edit </a>
 
 
 </body>
