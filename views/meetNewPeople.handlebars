@@ -79,7 +79,11 @@
         <form>
           <div class = "easy-sublist">
               {{#each descriptions}}
-                <label><input type="checkbox" name="easy-list">{{name}}</input></label><br>
+                <form>
+                  <input type="checkbox" name="easy-list">{{name}}</input>
+                  <button class="btn btn-primary"> Edit </button>
+                  <button class="btn btn-danger"> Delete </button>
+                </form><br>
               {{/each}}
           </div>
         </form>
