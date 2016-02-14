@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Butterfly | New Activity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="newActivity.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header class="bar bar-nav">
+    <a href="connect.html" data-ignore="push" class="icon icon-left-nav pull-left"></a>
+    <h1 class="title">Add Connections</h1>
+  </header>
+  <br></br>
+  <br></br>
+
+  <div class="name-container" align="center">
+    <form>
+      Name of Friend: <input type="text" name="NameOfFriend">
+    </form>
+    </div>
+
+  <div class="last-seen" align="center">
+    <form>
+      Haven't seen since: <input type="date" name="DateLastSeen">
+    </form>
+  </div>
+
+<div class ="goal-container" align="center">
+  <label for="Day-settings">
+    Goal to see every:
+    <select name="goal-setting">
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+    </select>
+  </label>
+  <label for="DWM-settings">
+    <select name="weekly-monthly-setting">
+      <option value="daily">Day(s)</option>
+      <option value="weekly">Week(s)</option>
+      <option value="monthly">Month(s)</option>
+    </select>
+  </label>
+</div>
+
+   <div align="center">
+    <form action="connect.html">
+      <input class="btn btn-primary" type="submit" value="Save Changes">
+    </form>
+  </div>
+
+    <br></br>
+
+   <div align="center">
+    <form action="connect.html">
+      <input class="btn btn-secondary" value="Cancel">
+    </form>
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
