@@ -99,3 +99,13 @@ a {
   margin-top:50px;
   margin-bottom:50px;
 }
+
+  .modal-header, h4, .close {
+    background-color: #F2354E;
+    color:white !important;
+    text-align: center;
+    font-size: 20px;
+  }
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
