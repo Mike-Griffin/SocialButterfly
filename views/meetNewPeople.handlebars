@@ -53,23 +53,27 @@
     </div>
 
     <div align = "center">
-    <div class="btn-group" data-toggle="buttons">
+     <p><a href="#" class="btn btn-primary btn-md" role="button">Active goals</a> <a href="meetCompleted.html" class="btn btn-default btn-md" role="button">Completed</a></p>
+      <!-- old code for buttons-->
+    <!--<div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active">
         <input type="radio" name="options" id="active-goals" autocomplete="off" checked> Active Goals
       </label>
       <label class="btn btn-primary">
         <input type="radio" name="options" id="completed" autocomplete="off"> Completed
       </label>
-    </div>
+    </div>-->
   </div>
+
   <hr></hr>
 
-  </div>
-
+  
+<div class="container">
     <!-- TASK ADD Button trigger modal -->
   <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
    <span class="glyphicon glyphicon-plus"></span> Add New Task 
   </button>
+</div>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
     <div class="modal-dialog">
@@ -197,7 +201,7 @@
               {{/each}}
           </div>
           <!-- Added edit/delete buttons -->
-          <button href="editActivityModal"// class="btn btn-primary"> Edit </button>
+          <button href="editActivityModal" class="btn btn-primary"> Edit </button>
           <button class="btn btn-danger"> Delete </button>
         </form>
       </div>
