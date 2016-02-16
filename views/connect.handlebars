@@ -62,11 +62,17 @@
         <ul class="list-group">
           <li class="list-group-item"><p>Haven't seen since</p>
                                       {{last-seen}}</li>
-          <li class="list-group-item"><p>Goal is to see every {{goal}}</p></li>
+          <li class="list-group-item"><p>Goal is to see every {{goal}}</p>
+          </li>
         </ul>
       </div>
       {{/each}}
+          <button class="btn btn-primary"> Edit </button>
+          <button class="btn btn-danger"> Delete </button>
     </div>
   </div>
+
+  <a href="editConnectModal" class="btn btn-primary"> Edit </a>
+
 
 </body>

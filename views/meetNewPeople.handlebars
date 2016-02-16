@@ -79,9 +79,13 @@
         <form>
           <div class = "easy-sublist">
               {{#each descriptions}}
-                <label><input type="checkbox" name="easy-list">{{name}}</input></label><br>
+                <input type="checkbox" name="easy-list">{{name}}</input>
+                <br>
               {{/each}}
           </div>
+          <!-- Added edit/delete buttons -->
+          <button href="editActivityModal" class="btn btn-primary"> Edit </button>
+          <button class="btn btn-danger"> Delete </button>
         </form>
       </div>
     </div>
@@ -89,5 +93,11 @@
 
   </div>
 
-
+<script>
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+</script>
 </body>
