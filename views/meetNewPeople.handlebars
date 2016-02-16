@@ -65,6 +65,118 @@
 
   </div>
 
+    <!-- TASK ADD Button trigger modal -->
+  <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
+   <span class="glyphicon glyphicon-plus"></span> Add New Task 
+  </button>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+          <h2 class="modal-title" id="myModalLabel">New Task</h2>
+        </div>
+
+        <!-- START OF TASK ADD MODAL BODY-->
+
+        <div class="modal-body">         
+
+         <div class="level-container" align="center">
+          <div class="level-title">
+            <label><p>Level</p></label>
+          </div>
+
+          <div class="level-selector" form="levelform">
+            <select name="level-difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <br>
+
+          <div class="activity-section">
+           <label> <p>Activity</p></label>
+           <input type="text" class="form-control" id="psw" placeholder="Enter new activity">
+           <br>
+         </div>
+       </div> 
+
+       <p>
+        <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><i class="fa fa-plus"></i><span class="glyphicon glyphicon-plus"></span> Add new task</button>
+      </p>
+
+
+    </div>
+
+    <!-- END OF TASK ADD MODAL BODY -->
+
+    <div class="modal-footer">
+      <button type="button"  class="btn btn-danger btn-default pull-left" data-toggle="modal" data-target="#fail-save"> <span class="glyphicon glyphicon-remove"></span> Close</button>
+    </div>
+  </form>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+
+
+<!--Modal for TASK ADD SUCCESS-->
+<div class="modal fade" id="task-success" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+        <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-ok-circle"></span> Success!</h3>
+      </div>
+      <div class="modal-body">
+        <p>Your task has been added successfully.</p>
+      </div>
+
+      <!-- End of TASK ADD SUCCESS BODY-->
+
+      <div class="modal-footer">
+        <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to activities list</button>
+      </div>
+    </form>
+
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div>
+
+</div>
+<div id="push"></div>
+
+
+<!--Modal for QUIT W/O SAVING-->
+<div class="modal fade" id="fail-save" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#F2354E">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+        <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
+      </div>
+      <div class="modal-body">
+        <p>You haven't finished adding your task. If you quit now, all data will be lost.</p>
+      </div>
+
+      <!-- End of QUIT W/O SAVING-->
+
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to activities list</button>
+
+        <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding task</button>
+      </div>
+    </form>
+
+      </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div>
+
+</div>
+<div id="push"></div>
+<hr></hr>
+
   <div class="panel-group" align="center">
     {{#each activity}}
 
@@ -84,7 +196,7 @@
               {{/each}}
           </div>
           <!-- Added edit/delete buttons -->
-          <button href="editActivityModal" class="btn btn-primary"> Edit </button>
+          <button href="editActivityModal"// class="btn btn-primary"> Edit </button>
           <button class="btn btn-danger"> Delete </button>
         </form>
       </div>
@@ -94,10 +206,17 @@
   </div>
 
 <script>
+<!-- For ADDING NEW TASK-->
 $(document).ready(function(){
   $("#myBtn").click(function(){
-    $("#myModal").modal();
+    $("#myNewActivity").modal();
   });
 });
+
+<!-- for SUCCESSFULLY ADDING TASK -->
+$('#btnCancel').click(function(){
+  $('#task-success').modal('toggle');
+});
 </script>
+
 </body>

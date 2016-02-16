@@ -52,76 +52,78 @@
 
   <hr></hr>
   <div class="container">
+    <!-- TASK ADD button trigger modal -->
     <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
       <span class="glyphicon glyphicon-plus"></span> Add New Connection 
     </button>
+
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-        <h2 class="modal-title" id="myModalLabel">New Connection</h2>
-  </div>
-  <!--<button class="btn btn-primary btn-block">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+            <h2 class="modal-title" id="myModalLabel">New Connection</h2>
+          </div>
+
+  <!-- THE OLD CODE <button class="btn btn-primary btn-block">
     <a href="newConnect" class="btn btn-primary" data-ignore="push"><i class="fa fa-plus"> Add new friend </i></a>
   </button>-->
 
-        <!-- START OF TASK ADD MODAL BODY-->
+  <!-- START OF TASK ADD MODAL BODY-->
+  <div class="modal-body">         
+    <div class="name-container" align="center">
+      <div class="name-title">
+        <form for="name">
+        </span> Name:
 
-      <div class="modal-body">         
-       <div class="name-container" align="center">
-        <div class="name-title">
-          <form for="name">
-          </span> Name:
+        <input type="text" class="form-control" id="psw" placeholder="Enter name of friend you want to catch up with">
+      </input>
+    </form>
+  </div>
 
-          <input type="text" class="form-control" id="psw" placeholder="Enter name of friend you want to catch up with">
-        </input>
-      </form>
-    </div>
+  <br>
 
-    <br>
+  <div class="last-seen" align="center">
+    <form>
+      Haven't seen since: <input type="date" name="DateLastSeen">
+    </form>
+  </div>
 
-    <div class="last-seen" align="center">
-      <form>
-        Haven't seen since: <input type="date" name="DateLastSeen">
-      </form>
-    </div>
+  <br>
 
-    <br>
+  <div class ="goal-container" align="center">
+    <form for="Day-settings">
+      Goal to see every:
+      <select name="goal-setting">
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+      </select>
+    </label>
 
-    <div class ="goal-container" align="center">
-      <form for="Day-settings">
-        Goal to see every:
-        <select name="goal-setting">
-          <option value="01">01</option>
-          <option value="02">02</option>
-          <option value="03">03</option>
-          <option value="04">04</option>
-          <option value="05">05</option>
-          <option value="06">06</option>
-          <option value="07">07</option>
-          <option value="08">08</option>
-          <option value="09">09</option>
-          <option value="10">10</option>
-        </select>
-      </label>
-      <label for="DWM-settings">
-        <select name="weekly-monthly-setting">
-          <option value="daily">Day(s)</option>
-          <option value="weekly">Week(s)</option>
-          <option value="monthly">Month(s)</option>
-        </select>
-      </form>
-    </div>
+    <label for="DWM-settings">
+      <select name="weekly-monthly-setting">
+        <option value="daily">Day(s)</option>
+        <option value="weekly">Week(s)</option>
+        <option value="monthly">Month(s)</option>
+      </select>
+    </form>
+  </div>
 
-    <br>
+  <br>
 
   </div>
 
   <p>
     <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Add new connection</button>
   </p>
-
 
 </div>
 
@@ -215,14 +217,14 @@
   </div>
 
 <script>
-/* For EDITING NEW TASK */
+/* For ADDING NEW TASK */
 $(document).ready(function(){
   $("#myBtn").click(function(){
     $("#myNewActivity").modal();
   });
 });
 
-/* For SUCCESSFULLY EDITING TASK */
+/* For SUCCESSFULLY ADDING TASK */
 $('#btnCancel').click(function(){
   $('#task-success').modal('toggle');
 });
