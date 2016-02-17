@@ -14,10 +14,6 @@ exports.view = function(req, res) {
     console.log('inserted');
   }
 
-  $('#alert-for-add-success').click(function() {
-    $('#success-alert').addClass('in');
-  });
-
   console.log(JSON.stringify(data));
   res.render('meetNewPeople', data);
 };
