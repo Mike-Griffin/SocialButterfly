@@ -11,6 +11,54 @@
   <!-- Optional theme -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+
+/***********************
+  RAISED BUTTONS
+  ************************/
+  .btn-primary.raised {
+    box-shadow: 0 3px 0 0 #007299;
+  }
+  .btn-primary.raised:active, .btn-primary.raised.active {
+    background: #33a6cc;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+  }
+
+/***********************
+  CUSTON BTN VALUES
+  ************************/
+
+  .btn {
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+  }
+
+  .btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+  }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+  }
+  .btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+  }
+
+  .list-group li {
+    list-style: none;
+  }
+
+  </style>
+
   
 </head>
 
@@ -55,7 +103,7 @@
     </div>
 
     <div align = "center">
-     <p><a href="#" class="btn btn-primary btn-md" role="button">Active goals</a> <a href="meetCompleted.html" class="btn btn-default btn-md" role="button">Completed</a></p>
+     <p><a href="#" class="btn btn-primary btn-md" role="button">Active goals</a> <a href="meetCompleted" class="btn btn-default btn-md" role="button">Completed</a></p>
       <!-- old code for buttons-->
     <!--<div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active">
@@ -76,6 +124,8 @@
    <span class="glyphicon glyphicon-plus"></span> Add New Task
   </button>
 </div>
+
+<hr></hr>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
     <div class="modal-dialog">
@@ -144,7 +194,7 @@
       <!-- End of TASK ADD SUCCESS BODY-->
 
       <div class="modal-footer">
-        <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to activities list</button>
+        <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to list</button>
       </div>
     </form>
 
@@ -171,7 +221,7 @@
       <!-- End of QUIT W/O SAVING-->
 
       <div class="modal-footer">
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to activities list</button>
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to list</button>
 
         <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding task</button>
       </div>
