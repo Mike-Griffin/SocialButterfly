@@ -1,0 +1,44 @@
+body  {
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ background-position: center;
+ background-size:350%;
+
+}
+h1 {
+ text-align: center;
+ font-family: Lobster;
+ font-size: 34px;
+}
+
+#home-screen-text h1 {
+ margin: 30px 0px 0px 0px;
+ font-weight:200;
+}
+#home-screen-text h2 {
+ margin: 35px 0px 0px 0px;
+ font-weight:200;
+}
+
+ul {
+ list-style-type: none;
+ padding: 0;
+}
+.page-links ul li {
+ display: block;
+ margin-top: 50px;
+}
+p {
+ padding: 20px;
+ background-color: white;
+/*<!-- border: 1px solid black; -->*/
+ width: 200px;
+ border-radius:10px;
+ box-shadow: 1px 3px 10px;
+
+}
+
+a {
+ color: #000;
+ text-decoration: none;
+
+}
