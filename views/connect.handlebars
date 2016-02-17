@@ -54,7 +54,7 @@
   <div class="container">
     <!-- TASK ADD button trigger modal -->
     <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
-      <span class="glyphicon glyphicon-plus"></span> Add New Connection 
+      <span class="glyphicon glyphicon-plus"></span> Add New Connection
     </button>
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
@@ -70,23 +70,21 @@
   </button>-->
 
   <!-- START OF TASK ADD MODAL BODY-->
-  <div class="modal-body">         
+  <div class="modal-body">
     <div class="name-container" align="center">
       <div class="name-title">
         <form for="name">
         </span> Name:
 
-        <input type="text" class="form-control" id="psw" placeholder="Enter name of friend you want to catch up with">
+        <input type="text" name = "friend" class="form-control" id="psw" placeholder="Enter name of friend you want to catch up with">
       </input>
-    </form>
+
   </div>
 
   <br>
 
   <div class="last-seen" align="center">
-    <form>
-      Haven't seen since: <input type="date" name="DateLastSeen">
-    </form>
+      Haven't seen since: <input type="date" name="date">
   </div>
 
   <br>
@@ -94,7 +92,7 @@
   <div class ="goal-container" align="center">
     <form for="Day-settings">
       Goal to see every:
-      <select name="goal-setting">
+      <select name="num">
         <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -109,12 +107,11 @@
     </label>
 
     <label for="DWM-settings">
-      <select name="weekly-monthly-setting">
+      <select name="time">
         <option value="daily">Day(s)</option>
         <option value="weekly">Week(s)</option>
         <option value="monthly">Month(s)</option>
       </select>
-    </form>
   </div>
 
   <br>
@@ -124,6 +121,7 @@
   <p>
     <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Add new connection</button>
   </p>
+</form>
 
 </div>
 
@@ -179,7 +177,7 @@
       <!-- End of QUIT W/O SAVING-->
 
       <div class="modal-footer">
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to friends list</button>
+          <a href="connect" class="btn btn-default pull-left" > <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to friends list</a>
 
         <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding connection</button>
       </div>

@@ -67,11 +67,11 @@
 
   <hr></hr>
 
-  
+
 <div class="container">
     <!-- TASK ADD Button trigger modal -->
   <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
-   <span class="glyphicon glyphicon-plus"></span> Add New Task 
+   <span class="glyphicon glyphicon-plus"></span> Add New Task
   </button>
 </div>
 
@@ -85,18 +85,19 @@
 
         <!-- START OF TASK ADD MODAL BODY-->
 
-        <div class="modal-body">         
+        <div class="modal-body">
 
          <div class="level-container" align="center">
           <div class="level-title">
             <label><p>Level</p></label>
           </div>
 
+          <form action="meetNewPeople">
           <div class="level-selector" form="levelform">
             <select name="level-difficulty">
-              <option value="easy">Easy</option>
-              <option value="medium">Medium</option>
-              <option value="hard">Hard</option>
+              <option value="0">Easy</option>
+              <option value="1">Medium</option>
+              <option value="2">Hard</option>
             </select>
           </div>
 
@@ -104,15 +105,15 @@
 
           <div class="activity-section">
            <label> <p>Activity</p></label>
-           <input type="text" class="form-control" id="psw" placeholder="Enter new activity">
+           <input type="text" name = "ActivityDescription" class="form-control" id="psw" placeholder="Enter new activity">
            <br>
          </div>
-       </div> 
+       </div>
 
        <p>
         <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Add new task</button>
       </p>
-
+    </form>
 
     </div>
 
