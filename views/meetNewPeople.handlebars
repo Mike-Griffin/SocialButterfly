@@ -67,11 +67,11 @@
 
   <hr></hr>
 
-  
+
 <div class="container">
     <!-- TASK ADD Button trigger modal -->
   <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
-   <span class="glyphicon glyphicon-plus"></span> Add New Task 
+   <span class="glyphicon glyphicon-plus"></span> Add New Task
   </button>
 </div>
 
@@ -85,7 +85,7 @@
 
         <!-- START OF TASK ADD MODAL BODY-->
 
-        <div class="modal-body">         
+        <div class="modal-body">
 
          <div class="level-container" align="center">
           <div class="level-title">
@@ -107,7 +107,7 @@
            <input type="text" class="form-control" id="psw" placeholder="Enter new activity">
            <br>
          </div>
-       </div> 
+       </div>
 
        <p>
         <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Add new task</button>
@@ -141,7 +141,7 @@
       <!-- End of TASK ADD SUCCESS BODY-->
 
       <div class="modal-footer">
-        <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to activities list</button>
+        <a href="meetNewPeople"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to activities list</a>
       </div>
     </form>
 
@@ -154,12 +154,12 @@
 
 
 <!--Modal for QUIT W/O SAVING-->
-<div class="modal fade" id="fail-save" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
+<div class="modal fade" id="fail-save" tabindex="-1" role="dialog" aria-labelledby="fail-save-title" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="background-color:#F2354E">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-        <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
+        <h3 class="modal-title" id="fail-save-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
       </div>
       <div class="modal-body">
         <p>You haven't finished adding your task. If you quit now, all data will be lost.</p>
@@ -167,8 +167,9 @@
 
       <!-- End of QUIT W/O SAVING-->
 
+
       <div class="modal-footer">
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to activities list</button>
+          <a href = "meetNewPeople" class="btn btn-default pull-left" > <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to activities list</a>
 
         <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding task</button>
       </div>
