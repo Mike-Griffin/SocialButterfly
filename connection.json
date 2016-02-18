@@ -3,19 +3,19 @@
 		{
 			"id": 1,
 			"name": "Mike",
-			"last-seen": "1/27/16",
-      "goal": "2 weeks"
+			"date": "01/27/2016",
+      "goal": "1 month"
 		},
 		{
 			"id": 2,
       "name": "Deb",
-      "last-seen": "2/1/16",
+      "date": "02/01/2016",
       "goal": "2 weeks"
 		},
 		{
 			"id": 3,
       "name": "Viv",
-      "last-seen": "2/3/16",
+      "date": "02/13/16",
       "goal": "10 days"
 		}
 	]

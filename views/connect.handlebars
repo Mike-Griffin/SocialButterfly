@@ -140,24 +140,24 @@
     <form for="Day-settings">
       Goal to see every:
       <select name="num">
-        <option value="01">01</option>
-        <option value="02">02</option>
-        <option value="03">03</option>
-        <option value="04">04</option>
-        <option value="05">05</option>
-        <option value="06">06</option>
-        <option value="07">07</option>
-        <option value="08">08</option>
-        <option value="09">09</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
         <option value="10">10</option>
       </select>
     </label>
 
     <label for="DWM-settings">
       <select name="time">
-        <option value="daily">Day(s)</option>
-        <option value="weekly">Week(s)</option>
-        <option value="monthly">Month(s)</option>
+        <option value="day">Day(s)</option>
+        <option value="week">Week(s)</option>
+        <option value="month">Month(s)</option>
       </select>
   </div>
 
@@ -250,7 +250,7 @@
       <div id='{{id}}' class="panel-collapse collapse">
         <ul class="list-group">
           <li class="list-group-item"><p>Haven't seen since</p>
-                                      {{last-seen}}</li>
+                                      {{date}}</li>
           <li class="list-group-item"><p>Goal is to see every {{goal}}</p>
             <!--
             <button href="editConnectModal" class="btn btn-primary"> Edit </button>
@@ -274,7 +274,9 @@
         <div class="modal-body">
           <div class="name-container" align="center">
             <div class="name-title">
-              <form for="name">
+              <form action="connect">
+                <input type="hidden" name="idVal" value="{{id}}">
+
               </span> Name:
 
               <input type="text" name = "friend" class="form-control" id="psw" value="{{name}}">
@@ -285,33 +287,34 @@
         <br>
 
         <div class="last-seen" align="center">
-            Haven't seen since: <input type="date" name="date" value={{last-seen}}>
+            Haven't seen since: <input type="date" name="date">
         </div>
 
         <br>
 
         <div class ="goal-container" align="center">
-          <form for="Day-settings">
             Goal to see every:
             <select name="num">
-              <option value="01">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>
-              <option value="04">04</option>
-              <option value="05">05</option>
-              <option value="06">06</option>
-              <option value="07">07</option>
-              <option value="08">08</option>
-              <option value="09">09</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
               <option value="10">10</option>
             </select>
           </label>
 
+
+
           <label for="DWM-settings">
             <select name="time">
-              <option value="daily">Day(s)</option>
-              <option value="weekly">Week(s)</option>
-              <option value="monthly">Month(s)</option>
+              <option value="day">Day(s)</option>
+              <option value="week">Week(s)</option>
+              <option value="month">Month(s)</option>
             </select>
         </div>
 

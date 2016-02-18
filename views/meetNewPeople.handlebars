@@ -13,51 +13,61 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
-   <style>
-
-/***********************
+  <style>
+    /***********************
   RAISED BUTTONS
   ************************/
-  .btn-primary.raised {
-    box-shadow: 0 3px 0 0 #007299;
-  }
-  .btn-primary.raised:active, .btn-primary.raised.active {
-    background: #33a6cc;
-    box-shadow: none;
-    margin-bottom: -3px;
-    margin-top: 3px;
-  }
 
-/***********************
+    .btn-primary.raised {
+      box-shadow: 0 3px 0 0 #007299;
+    }
+
+    .btn-primary.raised:active,
+    .btn-primary.raised.active {
+      background: #33a6cc;
+      box-shadow: none;
+      margin-bottom: -3px;
+      margin-top: 3px;
+    }
+    /***********************
   CUSTON BTN VALUES
   ************************/
 
-  .btn {
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  .btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
-  }
+    .btn {
+      border: 0 none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-  .btn-primary {
-    background: #0099cc;
-    color: #ffffff;
-  }
-  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #33a6cc;
-  }
-  .btn-primary:active, .btn-primary.active {
-    background: #007299;
-    box-shadow: none;
-  }
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus {
+      outline: 0 none;
+    }
 
-  .list-group li {
-    list-style: none;
-  }
+    .btn-primary {
+      background: #0099cc;
+      color: #ffffff;
+    }
 
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+      background: #33a6cc;
+    }
+
+    .btn-primary:active,
+    .btn-primary.active {
+      background: #007299;
+      box-shadow: none;
+    }
+
+    .list-group li {
+      list-style: none;
+    }
   </style>
 
 
@@ -120,7 +130,7 @@
     </button>
   </div>
 
-<hr></hr>
+  <hr></hr>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
     <div class="modal-dialog">
@@ -198,13 +208,7 @@
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to activities list</button>
         </div>
         </form>
-<!--
-<<<<<<< HEAD
-=======
-      <div class="modal-footer">
-        <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to list</button>
->>>>>>> cdcb0f82ff70deda1add4251267162a11214e782
--->
+
       </div>
       <!-- /.modal-content -->
     </div>
@@ -228,14 +232,14 @@
         <!-- End of QUIT W/O SAVING-->
 
 
-          <button type="button" class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding task</button>
-        </div>
-        </form>
-
+        <button type="button" class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding task</button>
       </div>
-      <!-- /.modal-content -->
+      </form>
+
     </div>
-    <!-- /.modal-dialog -->
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
   </div>
 
 
