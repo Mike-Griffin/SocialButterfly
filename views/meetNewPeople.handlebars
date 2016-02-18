@@ -231,9 +231,12 @@
             </div>
             <div id="{{statId}}{{level}}" class="panel-collapse collapse">
               <div class="easy-sublist">
+                <br>
                 {{#each descriptions}}
-                  <input type="checkbox" class="list-checkbox">{{name}}</input>
+                  <input type="checkbox" class="list-checkbox">                     &nbsp;{{name}}           &nbsp;</input>
                   <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary edit-button"> Edit </button>
+
+                  &nbsp;
 
                   <div class="modal fade" id="editActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
                     <div class="modal-dialog">
@@ -289,6 +292,7 @@
 
                   <button class="btn btn-danger delete-button"> Delete </button>
                   <br>
+                                    <hr></hr>
                 {{/each}}
               </div>
               <!-- Added edit/delete buttons -->
