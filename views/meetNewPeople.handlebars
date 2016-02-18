@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-  {{!-- <div class="content-placeholder"></div> --}}
+
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -185,24 +186,24 @@
 
 
   <div class="panel-group" align="center">
-    {{#each status}}
-      <div id="{{statusType}}">
-        {{#each activity}}
+
+      <div id="active-list">
+
 
           <div class="panel panel-default">
 
             <div class="panel-heading">
               <h4 class="panel-title">
-          <a data-toggle="collapse" href="#{{statId}}{{level}}">{{level}}</a>
+          <a data-toggle="collapse" href="#activeEasy">Easy</a>
         </h4>
             </div>
-            <div id="{{statId}}{{level}}" class="panel-collapse collapse">
+            <div id="activeEasy" class="panel-collapse collapse">
               <div class="easy-sublist">
-                {{#each descriptions}}
-                  <input type="checkbox" name="easy-list">{{name}}</input>
-                  <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary"> Edit </button>
 
-                  <div class="modal fade" id="editActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                  <input type="checkbox" name="easy-list">Say hi to your neighbor</input>
+                  <button data-toggle="modal" data-target="#editActivityModal2" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -221,7 +222,7 @@
                               </label>
                             </div>
                             <form action="meetNewPeople">
-                              <input type="hidden" name="idVal" value="{{id}}">
+                              <input type="hidden" name="idVal" value="2">
 
                               <div class="level-selector" form="levelform">
                                 <select name="level-difficulty">
@@ -237,7 +238,7 @@
                                 <label>
                                   <p>Activity</p>
                                 </label>
-                                <input type="text" value="{{name}}" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <input type="text" value="Say hi to your neighbor" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
                                 <br>
                               </div>
                           </div>
@@ -256,14 +257,968 @@
 
                   <button class="btn btn-danger"> Delete </button>
                   <br>
-                {{/each}}
+
+                  <input type="checkbox" name="easy-list">Compliment a stranger</input>
+                  <button data-toggle="modal" data-target="#editActivityModal3" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="3">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Compliment a stranger" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
               </div>
               <!-- Added edit/delete buttons -->
             </div>
           </div>
-        {{/each}}
+
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading">
+              <h4 class="panel-title">
+          <a data-toggle="collapse" href="#activeMedium">Medium</a>
+        </h4>
+            </div>
+            <div id="activeMedium" class="panel-collapse collapse">
+              <div class="easy-sublist">
+
+                  <input type="checkbox" name="easy-list">Go to a club meeting</input>
+                  <button data-toggle="modal" data-target="#editActivityModal4" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="4">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Go to a club meeting" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Start a conversation on the bus</input>
+                  <button data-toggle="modal" data-target="#editActivityModal5" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="5">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Start a conversation on the bus" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Do nothing ever</input>
+                  <button data-toggle="modal" data-target="#editActivityModal1" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="1">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Do nothing ever" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+              </div>
+              <!-- Added edit/delete buttons -->
+            </div>
+          </div>
+
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading">
+              <h4 class="panel-title">
+          <a data-toggle="collapse" href="#activeHard">Hard</a>
+        </h4>
+            </div>
+            <div id="activeHard" class="panel-collapse collapse">
+              <div class="easy-sublist">
+
+                  <input type="checkbox" name="easy-list">Ask for someone&#x27;s phone number</input>
+                  <button data-toggle="modal" data-target="#editActivityModal6" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="6">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Ask for someone&#x27;s phone number" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Sing karoake</input>
+                  <button data-toggle="modal" data-target="#editActivityModal7" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="7">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Sing karoake" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Meet someone new in an unfamiliar place</input>
+                  <button data-toggle="modal" data-target="#editActivityModal8" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="8">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Meet someone new in an unfamiliar place" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+              </div>
+              <!-- Added edit/delete buttons -->
+            </div>
+          </div>
+
       </div>
-    {{/each}}
+
+      <div id="completed-list">
+
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading">
+              <h4 class="panel-title">
+          <a data-toggle="collapse" href="#completedEasy">Easy</a>
+        </h4>
+            </div>
+            <div id="completedEasy" class="panel-collapse collapse">
+              <div class="easy-sublist">
+
+                  <input type="checkbox" name="easy-list">Say Thank you to the bus driver as you get off from the back</input>
+                  <button data-toggle="modal" data-target="#editActivityModal9" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="9">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Say Thank you to the bus driver as you get off from the back" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Ask to borrow a pencil</input>
+                  <button data-toggle="modal" data-target="#editActivityModal10" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="10">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Ask to borrow a pencil" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Sit next to someone different in class</input>
+                  <button data-toggle="modal" data-target="#editActivityModal11" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="11">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Sit next to someone different in class" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+              </div>
+              <!-- Added edit/delete buttons -->
+            </div>
+          </div>
+
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading">
+              <h4 class="panel-title">
+          <a data-toggle="collapse" href="#completedMedium">Medium</a>
+        </h4>
+            </div>
+            <div id="completedMedium" class="panel-collapse collapse">
+              <div class="easy-sublist">
+
+                  <input type="checkbox" name="easy-list">Go to professor&#x27;s office hours</input>
+                  <button data-toggle="modal" data-target="#editActivityModal12" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="12">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Go to professor&#x27;s office hours" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Buy a new friend a cup of coffee</input>
+                  <button data-toggle="modal" data-target="#editActivityModal13" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="13">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Buy a new friend a cup of coffee" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Add a friend on social media</input>
+                  <button data-toggle="modal" data-target="#editActivityModal14" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="14">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Add a friend on social media" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+              </div>
+              <!-- Added edit/delete buttons -->
+            </div>
+          </div>
+
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading">
+              <h4 class="panel-title">
+          <a data-toggle="collapse" href="#completedHard">Hard</a>
+        </h4>
+            </div>
+            <div id="completedHard" class="panel-collapse collapse">
+              <div class="easy-sublist">
+
+                  <input type="checkbox" name="easy-list">Go to a house party</input>
+                  <button data-toggle="modal" data-target="#editActivityModal15" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="15">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Go to a house party" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+                  <input type="checkbox" name="easy-list">Get rejected</input>
+                  <button data-toggle="modal" data-target="#editActivityModal16" class="btn btn-primary"> Edit </button>
+
+                  <div class="modal fade" id="editActivityModal16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Task</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden" name="idVal" value="16">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="Get rejected" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button class="btn btn-danger"> Delete </button>
+                  <br>
+
+              </div>
+              <!-- Added edit/delete buttons -->
+            </div>
+          </div>
+
+      </div>
+
 
   </div>
 
