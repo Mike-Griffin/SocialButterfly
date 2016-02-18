@@ -115,7 +115,7 @@ a {
     background-color: #f9f9f9;
   }*/
 
-.modal-header, h2, .close {
+.modal-header h2 .close {
   background-color: #5cb85c;
   color:white !important;
   text-align: center;
