@@ -261,8 +261,8 @@
             <div id="{{statId}}{{level}}" class="panel-collapse collapse">
               <div class="easy-sublist">
                 {{#each descriptions}}
-                  <input type="checkbox" name="easy-list">{{name}}</input>
-                  <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary"> Edit </button>
+                  <input type="checkbox" class="list-checkbox">{{name}}</input>
+                  <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary edit-button"> Edit </button>
 
                   <div class="modal fade" id="editActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
                     <div class="modal-dialog">
@@ -316,7 +316,7 @@
                     </div>
                   </div>
 
-                  <button class="btn btn-danger"> Delete </button>
+                  <button class="btn btn-danger delete-button"> Delete </button>
                   <br>
                 {{/each}}
               </div>
@@ -338,7 +338,9 @@
 
     $(document).ready(function() {
       $("#completed-list").addClass("list-hide");
-
+      $("#completed-list .list-checkbox").addClass("list-hide");
+      $("#completed-list .edit-button").addClass("list-hide");
+      $("#completed-list .delete-button").addClass("list-hide");
       $("#myBtn").click(function() {
         $("#myNewActivity").modal();
       });
