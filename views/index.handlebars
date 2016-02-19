@@ -1,49 +1,187 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <link rel="stylesheet" href="css/home.css">
+
   <title>Social Butterfly</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Include the compiled Ratchet CSS -->
+  <link href="css/ratchet.css" rel="stylesheet">
+
+  <!--<link rel="stylesheet" href="css/normalize.css">-->
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+  <style type="text/css">
+  .back-link a {
+    color: #4ca340;
+    text-decoration: none;
+    border-bottom: 1px #4ca340 solid;
+  }
+  .back-link a:hover,
+  .back-link a:focus {
+    color: #408536;
+    text-decoration: none;
+    border-bottom: 1px #408536 solid;
+  }
+  h1 {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    margin-bottom: 3px;
+  }
+  .entry-header {
+    text-align: left;
+    margin: 0 auto 50px auto;
+    width: 80%;
+    max-width: 978px;
+    position: relative;
+    z-index: 10001;
+  }
+  #demo-content {
+    padding-top: 100px;
+  }
+  </style>
+
+  <style>
+
+/***********************
+  RAISED BUTTONS
+  ************************/
+  .btn-primary.raised {
+    box-shadow: 0 3px 0 0 #007299;
+  }
+  .btn-primary.raised:active, .btn-primary.raised.active {
+    background: #33a6cc;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+  }
+
+/***********************
+  CUSTON BTN VALUES
+  ************************/
+
+  .btn {
+    padding: 24px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+  }
+
+  .btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+  }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+  }
+  .btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+  }
+
+  .list-group li {
+    list-style: none;
+  }
+
+  </style>
+
 </head>
 
 <div id="pageone">
-<body>
+  <body>
 
-  <div id="home-screen-text" class="container-fluid" align="center">
-    <h1>Social Butterfly</h1>
+    <div id="demo content">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
 
-    <h2>I want to...</h2>
-  </div>
-
-  <div class = "page-links" align="center">
-    <ul>
-      <li><p><a href="meetNewPeople">MEET NEW PEOPLE</a></p></li>
-      <li><p><a href="connect"> CONNECT WITH FRIENDS</a> </p></li>
-      <li><p><a href="events"> GO TO EVENTS </a> </p></li>
-    </ul>
-  </div>
-  <br></br>
-  <br></br>
-
-  <div align="center">
-    <div class="text" style="color: #FFFFFF">
-      Signed in as Shay Pearson
-      <form action="login">
-      <div class="card" align ="center">
-        <button class="btn btn-link">
-          Not you?
-        </button>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
       </div>
-    </form>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
+    <br>
 
+    <div id="home-screen-text" class="container" align="center">
+      <b><h1>SOCIAL BUTTERFLY</h1></b>
+    </div>
 
+    <br>
 
-</body>
-</div>
+    <div class="container" >
+      <ul class="list-group">
+        <li>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="panel-info">
 
-</html>
+                <div class="card card-block">
+
+                  <div class="container" align="center">
+                    <div id="home-screen-text" class="container" align="center">
+                      <h2>I want to...</h2>
+                    </div>
+                    <ul>
+                      <br>
+                      <li>
+                        <a href="meetNewPeople">
+                          <button type="button" class="btn btn-warning btn-block raised">Challenge Myself</button>
+                        </a>
+                      </li>
+                      <br>
+                      <br>
+                      <li>
+                       <a href="connect">
+                        <button type="button" class="btn btn-warning btn-block raised">Connect with Old Friends</button>
+                      </a>
+                    </li>
+                    <br>
+                    <br>
+                    <li>
+                      <a href="events">
+                        <button type="button" class="btn btn-warning btn-block raised">Go to Events</button>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" align="center">
+          <div id="home-screen-text" class="text" style="color: #FFFFFF">
+            <h3> Signed in as Shay Pearson </h3>
+
+              <div class="container" align="center">
+                <a href="login">
+                  <button type="button" class="btn btn-primary btn-block raised"> NOT YOU? </button>
+                </a>
+              </div>
+
+          </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+
+      </body>
+    </div>
+
+    </html>

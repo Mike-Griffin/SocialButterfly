@@ -1,28 +1,81 @@
 {
-  "activity": [{
-    "level": "Easy",
-    "descriptions": [{
-      "name": "Wave hello at someone"
-    }, {
-      "name": "Say hi to your neighbor"
-    }, {
-      "name": "Compliment a stranger"
-    }]
-  }, {
-    "level": "Medium",
-    "descriptions": [{
-      "name": "Go to a club meeting"
-    }, {
-      "name": "Start a conversation on the bus"
+  "status": [{
+    "statusType": "active-list",
+    "activity": [{
+      "statId": "active",
+      "level": "Easy",
+      "descriptions": [{
+        "id": 1,
+        "name": "Wave hello at someone"
+      }, {
+        "id": 2,
+        "name": "Say hi to your neighbor"
+      }, {
+        "id": 3,
+        "name": "Compliment a stranger"
       }]
-  }, {
-    "level": "Hard",
-    "descriptions": [{
+    }, {
+      "statId": "active",
+      "level": "Medium",
+      "descriptions": [{
+        "id": 4,
+        "name": "Go to a club meeting"
+      }, {
+        "id": 5,
+        "name": "Start a conversation on the bus"
+      }]
+    }, {
+      "statId": "active",
+      "level": "Hard",
+      "descriptions": [{
+        "id": 6,
         "name": "Ask for someone's phone number"
       }, {
-        "name": "Sing karoake"
-        }, {
-          "name": "Meet someone new in an unfamiliar place"
-          }]
+        "id": 7,
+        "name": "Sing karaoke"
+      }, {
+        "id": 8,
+        "name": "Meet someone new in an unfamiliar place"
+      }]
+    }]
+  }, {
+    "statusType": "completed-list",
+    "activity": [{
+      "statId": "completed",
+      "level": "Easy",
+      "descriptions": [{
+        "id": 9,
+        "name": "Say Thank you to the bus driver as you get off from the back"
+      }, {
+        "id": 10,
+        "name": "Ask to borrow a pencil"
+      }, {
+        "id": 11,
+        "name": "Sit next to someone different in class"
+      }]
+    }, {
+      "statId": "completed",
+      "level": "Medium",
+      "descriptions": [{
+        "id": 12,
+        "name": "Go to professor's office hours"
+      }, {
+        "id": 13,
+        "name": "Buy a new friend a cup of coffee"
+      }, {
+        "id": 14,
+        "name": "Add a friend on social media"
+        }]
+    }, {
+      "statId": "completed",
+      "level": "Hard",
+      "descriptions": [{
+        "id": 15,
+        "name": "Go to a house party"
+      }, {
+        "id": 16,
+        "name": "Get rejected"
+      }]
+    }]
   }]
 }
