@@ -9,8 +9,13 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var login = require('./routes/login');
+var signup = require('./routes/signup');
 var quizIntro = require('./routes/quizIntro');
-var quizStart = require('./routes/quizStart');
+var quizOne = require('./routes/quizOne');
+var quizTwo = require('./routes/quizTwo');
+var quizThree = require('./routes/quizThree');
+var quizFour = require('./routes/quizFour');
+var quizFive = require('./routes/quizFive');
 var index = require('./routes/index');
 var meetNewPeople = require('./routes/meetNewPeople');
 var connect = require('./routes/connect');
@@ -50,8 +55,13 @@ if ('development' == app.get('env')) {
 // Add routes here
 
 app.get('/', login.view);
+app.get('/signup', signup.view);
 app.get('/quizIntro', quizIntro.view);
-app.get('/quizStart', quizStart.view);
+app.get('/quizOne', quizOne.view);
+app.get('/quizTwo', quizTwo.view);
+app.get('/quizThree', quizThree.view);
+app.get('/quizFour', quizFour.view);
+app.get('/quizFive', quizFive.view);
 app.get('/meetNewPeople', meetNewPeople.view);
 app.get('/connect', connect.view)
 app.get('/events', events.view);

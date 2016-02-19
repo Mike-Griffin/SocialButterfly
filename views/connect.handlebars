@@ -223,7 +223,7 @@
       <!-- End of QUIT W/O SAVING-->
 
       <div class="modal-footer">
-        <a href="connect" class="btn btn-default pull-left" > <span class="glyphicon glyphicon-arrow-left"></span> YES, go back</a>
+        <a href="connect" class="btn btn-default pull-left" > <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to friends</a>
 
         <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding connection</button>
       </div>
@@ -248,12 +248,12 @@
     </div>
     <div id='{{id}}' class="panel-collapse collapse">
       <ul class="list-group">
-        <li class="list-group-item"><p>Haven't seen since</p> 
+        <li class="list-group-item"><p>Haven't seen since</p>
           {{date}}
           <br>
           <br>
           <button class="btn btn-primary" data-toggle="modal" data-target="#{{id}}update">
-            Visited
+            Update
           </button>
           <br>
           <br>
@@ -395,8 +395,12 @@
   </div>
 </div>
 </div>
-<br> 
-<button class="btn btn-danger"> Delete </button>
+<br>
+<form action = "connect">
+  <input type="hidden" name="idVal" value="{{id}}">
+
+  <button type = "submit" class="btn btn-danger"> Delete </button>
+</form>
 </li>
 </ul>
 </div>

@@ -7,6 +7,19 @@ exports.view = function(req, res) {
   var desc = req.query.ActivityDescription;
   var idVal = req.query.idVal;
 
+  if(idVal !== undefined && difficulty === undefined && desc === undefined) {
+    for(var i = 0; i < 2; i++) {
+      for(var j = 0; j < 3; j++) {
+        for(var k = 0; k < data.status[i].activity[j].descriptions.length; k++) {
+
+          if(data.status[i].activity[j].descriptions[k].id == idVal) {
+            data.status[i].activity[j].descriptions.splice(k,1);
+          }
+        }
+      }
+    }
+  }
+
   if(difficulty !== undefined && desc !== undefined && idVal != undefined) {
 
 
@@ -44,10 +57,6 @@ exports.view = function(req, res) {
       'name': desc
     });
   }
-<<<<<<< HEAD
 
-  console.log(JSON.stringify(data));
-=======
->>>>>>> 18ca22db3b58ade36dd2f21beee9ccc8b22e0687
   res.render('meetNewPeople', data);
 };
