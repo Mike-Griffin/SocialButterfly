@@ -10,6 +10,7 @@ var handlebars = require('express3-handlebars')
 
 var login = require('./routes/login');
 var signup = require('./routes/signup');
+var quizIntro = require('./routes/quizIntro');
 var quizOne = require('./routes/quizOne');
 var quizTwo = require('./routes/quizTwo');
 var quizThree = require('./routes/quizThree');
@@ -55,6 +56,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', login.view);
 app.get('/signup', signup.view);
+app.get('/quizIntro', quizIntro.view);
 app.get('/quizOne', quizOne.view);
 app.get('/quizTwo', quizTwo.view);
 app.get('/quizThree', quizThree.view);
