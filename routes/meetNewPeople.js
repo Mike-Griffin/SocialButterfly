@@ -57,5 +57,6 @@ exports.view = function(req, res) {
       'name': desc
     });
   }
+
   res.render('meetNewPeople', data);
 };
