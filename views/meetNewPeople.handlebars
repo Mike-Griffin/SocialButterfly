@@ -341,7 +341,10 @@
       });
       $('#addedTask').delay(2000).queue(function(){
         $(this).addClass("list-hide");
-      });    });
+      });   
+
+      $('.panel:nth-child(1)').find('a').trigger('click'); 
+    });
 
     // for SUCCESSFULLY ADDING TASK -->
     $('#btnCancel').click(function() {
