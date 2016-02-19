@@ -110,6 +110,10 @@
   </div>
 -->
 
+  <div id = "addedTask">
+    <p> You did it </p>
+  </div>
+
   <div align="center">
     <div class="points">
       <h1> 453 POINTS </h1>
@@ -289,7 +293,10 @@
                     </div>
                   </div>
 
-                  <button class="btn btn-danger delete-button"> Delete </button>
+                  <form action = "meetNewPeople">
+                    <input type="hidden" name="idVal" value="{{id}}">
+                    <button type = "submit" class="btn btn-danger delete-button"> Delete </button>
+                  </form>
                   <br>
                                     <hr></hr>
                 {{/each}}
@@ -318,7 +325,9 @@
       $("#myBtn").click(function() {
         $("#myNewActivity").modal();
       });
-    });
+      $('#addedTask').delay(2000).queue(function(){
+        $(this).addClass("list-hide");
+      });    });
 
     // for SUCCESSFULLY ADDING TASK -->
     $('#btnCancel').click(function() {
@@ -335,11 +344,8 @@
         $("#add-new-button").addClass("list-hide");
         //document.getElementById("completed-list").classList.remove("list-hide");
       }
-
-
-
-
     }
+
 
     function activeClicked() {
 
@@ -355,6 +361,7 @@
 
 
     }
+
   </script>
 
 </body>
