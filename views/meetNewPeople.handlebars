@@ -236,9 +236,31 @@
         <div class="easy-sublist">
           <br>
           {{#each descriptions}}
-          <input type="checkbox" class="list-checkbox">
-          &nbsp;{{name}} &nbsp;
-        </input>
+          <button data-toggle="modal" data-target="#completeActivityModal{{id}}" class = "btn complete-task-button"><i class="fa fa-check"></i></button>
+          <div class="modal fade" id="completeActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h4>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to mark task as completed?
+                </div>
+                <div class="modal-footer">
+                  <form action = "meetNewPeople">
+                    <input type="hidden" name="idVal" value="{{id}}">
+                    <input type="hidden" name="ActivityDescription" value="{{name}}">
+                    <button type="submit" class="btn btn-primary pull-left">YES, mark as completed</button>
+                  </form>
+                  <a href="meetNewPeople">
+                    <button type="button" class="btn btn-default pull-right">NO, close window</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+            {{name}}
         <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary edit-button"> Edit </button>
 
         &nbsp;
@@ -337,6 +359,7 @@
       $("#completed-list .list-checkbox").addClass("list-hide");
       $("#completed-list .edit-button").addClass("list-hide");
       $("#completed-list .delete-button").addClass("list-hide");
+      $("#completed-list .complete-task-button").addClass("list-hide");
       $("#myBtn").click(function() {
         $("#myNewActivity").modal();
       });
@@ -381,7 +404,7 @@
     }
 
     </script>
-
+<!--
     <div class="modal fade" id="myCheckModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -400,7 +423,7 @@
           </div>
         </div>
       </div>
-
+-->
       <script>
       $('input:checkbox').change(function(){
        $(this).is(':checked')?$('#myCheckModal').modal('show'):"";

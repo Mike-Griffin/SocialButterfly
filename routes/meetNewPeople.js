@@ -7,6 +7,10 @@ exports.view = function(req, res) {
   var desc = req.query.ActivityDescription;
   var idVal = req.query.idVal;
 
+  console.log(difficulty);
+  console.log(desc);
+  console.log(idVal);
+
   if(idVal !== undefined && difficulty === undefined && desc === undefined) {
     for(var i = 0; i < 2; i++) {
       for(var j = 0; j < 3; j++) {
@@ -20,7 +24,24 @@ exports.view = function(req, res) {
     }
   }
 
-  if(difficulty !== undefined && desc !== undefined && idVal != undefined) {
+  else if(idVal !== undefined && difficulty === undefined && desc !== undefined) {
+    for(var i = 0; i < 2; i++) {
+      for(var j = 0; j < 3; j++) {
+        for(var k = 0; k < data.status[i].activity[j].descriptions.length; k++) {
+
+          if(data.status[i].activity[j].descriptions[k].id == idVal) {
+            data.status[i].activity[j].descriptions.splice(k,1);
+            data.status[1].activity[j].descriptions.push({
+              'id': idVal,
+              'name': desc
+            });
+          }
+        }
+      }
+    }
+  }
+
+  else if(difficulty !== undefined && desc !== undefined && idVal != undefined) {
 
 
     for(var i = 0; i < 2; i++) {
