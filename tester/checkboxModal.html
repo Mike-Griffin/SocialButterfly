@@ -7,132 +7,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <style>
-     /*
-      ----------------------------------------------
-                          CHECKBOX
-      ----------------------------------------------
-      */
-      /* Base for label styling */
-      [type="checkbox"]:not(:checked),
-      [type="checkbox"]:checked {
-        position: absolute;
-        left: -9999px;
-      }
-      [type="checkbox"]:not(:checked) + label,
-      [type="checkbox"]:checked + label {
-        position: relative;
-        padding-left: 25px;
-        cursor: pointer;
-      }
-
-      /* checkbox aspect */
-
-      [type="checkbox"]:checked + label:before {
-        content: '';
-        position: absolute;
-        left:0; top: 0px;
-        width: 20px; height: 20px;
-        //border: 1px solid #aaa;
-        background: #09ad7e;
-        border-radius: 3px;
-        //box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
-      }
-      [type="checkbox"]:not(:checked) + label:before {
-        content: '';
-        position: absolute;
-        left:0; top: 0px;
-        width: 20px; height: 20px;
-        //border: 1px solid #fff;
-        background: #eee;
-        border-radius: 3px;
-        //box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
-      }
-      /* checked mark aspect */
-
-      [type="checkbox"]:checked + label:after {
-        content: '✔';
-        position: absolute;
-        top: 0; left: 4px;
-        font-size: 14px;
-        color: #f8f8f8;
-        transition: all .2s;
-      }
-      [type="checkbox"]:not(:checked) + label:after {
-        content: '✔';
-        position: absolute;
-        top: 0; left: 4px;
-        font-size: 14px;
-        color: #ddd;
-        transition: all .2s;
-
-      }
-      /* checked mark aspect changes */
-      [type="checkbox"]:not(:checked) + label:after {
-        opacity: 1;
-        transform: scale(1);
-      }
-      [type="checkbox"]:checked + label:after {
-        opacity: 1;
-        transform: scale(1);
-      }
-      /* disabled checkbox */
-      [type="checkbox"]:disabled:not(:checked) + label:before,
-      [type="checkbox"]:disabled:checked + label:before {
-        box-shadow: none;
-        border-color: #bbb;
-        background-color: #ddd;
-      }
-      [type="checkbox"]:disabled:checked + label:after {
-        color: #999;
-      }
-      [type="checkbox"]:disabled + label {
-        color: #aaa;
-      }
-      /* accessibility */
-      [type="checkbox"]:checked:focus + label:before,
-      [type="checkbox"]:not(:checked):focus + label:before {
-       outline: none !important;
-     }
-
-     /* hover style just for information */
-     label:hover:before {
-      //border: 1px solid #4778d9!important;
-    }
-
-    [type="checkbox"]:not(:checked) + label {
-      color: #ddd;
-    }
-
-    </style>
-
-    <!-- STYLE FOR MODAL WINDOWS -->
-
-    <style>
-    .modal-header, h2, .close {
-      background-color: #5cb85c;
-      color:white !important;
-      text-align: center;
-      font-size: 20px;
-    }
-    .modal-footer {
-      background-color: #f9f9f9;
-    }
-
-    #task-success {
-      z-index: 1080 !important;
-
-    }
-    </style>
-
   </head>
   <body>
 
-    <input type="checkbox" id="test7"/>
-    <label for="test7">Custom Avalability</label>
+    <input type="checkbox" id="test7">
+  </input>
+    <label for="test7">{{name}}</label>
     <br /><br />
-    <input type="checkbox" id="test6"/>
-    <label for="test6">Manual</label>
+    <input type="checkbox" id="test6">
+    <label for="test6">{{name}}</label>
+  </input>
 
 
     <!-- Modal -->
@@ -141,7 +25,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-remove-circle"></span> Wait</h4>
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h4>
           </div>
           <div class="modal-body">
             Are you sure you want to mark task as completed?
@@ -149,7 +33,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">YES, mark as completed</button>
             <form action="meetNewPeople">
-            <button type="button" class="btn btn-default pull-right">NO, close</button>
+            <button type="button" class="btn btn-default pull-right">NO, close window</button>
           </form>
           </div>
         </div>

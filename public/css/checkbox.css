@@ -92,8 +92,4 @@
 
       [type="checkbox"]:not(:checked) + label {
       color: #ddd;
-<<<<<<< HEAD
-      }
-=======
-      }
->>>>>>> 919e0bc87f305e32e5c4ed5d1b1e2e41796d4077
+}
