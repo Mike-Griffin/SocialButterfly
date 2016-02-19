@@ -21,6 +21,7 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="style.css"
+
   <!-- Latest compiled and minified JavaScript -->
 
 <!--  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
@@ -48,6 +49,64 @@
   }
 
   </script>
+
+  <style>
+    /***********************
+  RAISED BUTTONS
+  ************************/
+
+    .btn-primary.raised {
+      box-shadow: 0 3px 0 0 #007299;
+    }
+
+    .btn-primary.raised:active,
+    .btn-primary.raised.active {
+      background: #33a6cc;
+      box-shadow: none;
+      margin-bottom: -3px;
+      margin-top: 3px;
+    }
+    /***********************
+  CUSTON BTN VALUES
+  ************************/
+
+    .btn {
+      border: 0 none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus {
+      outline: 0 none;
+    }
+
+    .btn-primary {
+      background: #0099cc;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+      background: #33a6cc;
+    }
+
+    .btn-primary:active,
+    .btn-primary.active {
+      background: #007299;
+      box-shadow: none;
+    }
+
+    .list-group li {
+      list-style: none;
+    }
+  </style>
+
 
 
   <style>
@@ -163,21 +222,36 @@
     <ul class="table-view">
       <li class="table-view-cell">
         Monthly
-        <div class="toggle">
-          <div class="toggle-handle"></div>
-        </div>
+<div class="btn-group pull-right" data-toggle="buttons">
+  <label class="btn btn-warning active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> ON
+  </label>
+  <label class="btn btn-warning">
+    <input type="radio" name="options" id="option2" autocomplete="off"> OFF
+  </label>
+</div>
       </li>
       <li class="table-view-cell">
         Weekly
-        <div class="toggle active">
-          <div class="toggle-handle"></div>
-        </div>
+<div class="btn-group pull-right" data-toggle="buttons">
+  <label class="btn btn-warning">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> ON
+  </label>
+  <label class="btn btn-warning active">
+    <input type="radio" name="options" id="option2" autocomplete="off"> OFF
+  </label>
+</div>
       </li>
       <li class="table-view-cell">
         Daily
-        <div class="toggle">
-          <div class="toggle-handle"></div>
-        </div>
+<div class="btn-group pull-right" data-toggle="buttons">
+  <label class="btn btn-warning">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> ON
+  </label>
+  <label class="btn btn-warning active">
+    <input type="radio" name="options" id="option2" autocomplete="off"> OFF
+  </label>
+</div>
       </li>
     </ul>
   </div>
@@ -203,7 +277,7 @@
 <!-- Logout button -->
 <div class="container">
   <form action="/">
-    <button class="btn btn-warning btn-block">Log out</button>
+    <button class="btn btn-danger btn-block">Log out</button>
   </form>
 </div>
 
