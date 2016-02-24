@@ -369,8 +369,10 @@
       $('#addedTask').delay(2000).queue(function(){
         $(this).addClass("list-hide");
       });
-
+      //expand all the menus
       $('.panel:nth-child(1)').find('a').trigger('click');
+      $('.panel:nth-child(2)').find('a').trigger('click');
+      $('.panel:nth-child(3)').find('a').trigger('click');
     });
 
     // for SUCCESSFULLY ADDING TASK -->
