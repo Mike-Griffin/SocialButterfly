@@ -103,14 +103,14 @@
   <div class="container">
     <!-- TASK ADD button trigger modal -->
     <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
-      <span class="glyphicon glyphicon-plus"></span> Add New Connection
+      <span class="glyphicon glyphicon-plus"></span> Add New Friend
     </button>
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title" id="myModalLabel">New Connection
+            <h2 class="modal-title" id="myModalLabel">New Friend
              <button type="button" class="btn btn-danger btn-default pull-right" data-toggle="modal" data-target="#fail-save"> <span class="glyphicon glyphicon-remove"></span> Close</button>
            </h2>
          </div>
@@ -169,7 +169,7 @@
     </div>
 
     <p>
-      <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Add new connection</button>
+      <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Add new friend</button>
     </p>
   </form>
 
@@ -191,7 +191,7 @@
         <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-ok-circle"></span> Success!</h3>
       </div>
       <div class="modal-body">
-        <p>Your connection has been added successfully.</p>
+        <p>Your friend has been added successfully.</p>
       </div>
 
       <!-- End of TASK ADD SUCCESS BODY-->
@@ -217,15 +217,15 @@
         <h3 style="color: #FFFFFF" class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
       </div>
       <div class="modal-body">
-        <p>You haven't finished adding your connection. If you quit now, all data will be lost.</p>
+        <p>You haven't finished adding your friend. If you quit now, all data will be lost.</p>
       </div>
 
       <!-- End of QUIT W/O SAVING-->
 
       <div class="modal-footer">
-        <a href="connect" class="btn btn-default pull-left" > <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to friends</a>
+        <a href="connect" class="btn btn-default pull-left" > <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to friends list</a>
 
-        <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding connection</button>
+        <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding friend</button>
       </div>
     </form>
 
@@ -253,7 +253,7 @@
           <br>
           <br>
           <button class="btn btn-primary" data-toggle="modal" data-target="#{{id}}update">
-            Update
+            Update Last Seen
           </button>
           <br>
           <br>
@@ -261,15 +261,15 @@
             <!--
             <button href="editConnectModal" class="btn btn-primary"> Edit </button>
           -->
-          <button class="btn btn-primary" data-toggle="modal" data-target="#{{id}}edit">
-            Edit
+          <button class="btn btn-warning" data-toggle="modal" data-target="#{{id}}edit">
+            Edit Info
           </button>
           <div class="modal fade" id="{{id}}edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-                  <h2 class="modal-title" id="{{name}}">Edit Connection</h2>
+                  <h2 class="modal-title" id="{{name}}">Edit Friend</h2>
                 </div>
 
         <!-- THE OLD CODE <button class="btn btn-primary btn-block">
@@ -350,7 +350,7 @@
         <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-ok-circle"></span> Success!</h3>
       </div>
       <div class="modal-body">
-        <p>Your connection has been added successfully.</p>
+        <p>Your friend has been added successfully.</p>
       </div>
 
       <!-- End of TASK ADD SUCCESS BODY-->
@@ -377,7 +377,7 @@
         <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
       </div>
       <div class="modal-body">
-        <p>You haven't finished adding your connection. If you quit now, all data will be lost.</p>
+        <p>You haven't finished adding your friend. If you quit now, all data will be lost.</p>
       </div>
 
       <!-- End of QUIT W/O SAVING-->
@@ -385,7 +385,7 @@
       <div class="modal-footer">
         <a href="connect" class="btn btn-default pull-left" > <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to friends list</a>
 
-        <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding connection</button>
+        <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding friend</button>
       </div>
     </form>
   </div>
