@@ -17,6 +17,7 @@ var quizTwo = require('./routes/quizTwo');
 var quizThree = require('./routes/quizThree');
 var quizFour = require('./routes/quizFour');
 var quizFive = require('./routes/quizFive');
+var quizEnd = require('./routes/quizEnd');
 var index = require('./routes/index');
 var meetNewPeople = require('./routes/meetNewPeople');
 var connect = require('./routes/connect');
@@ -64,6 +65,7 @@ app.get('/quizTwo', quizTwo.view);
 app.get('/quizThree', quizThree.view);
 app.get('/quizFour', quizFour.view);
 app.get('/quizFive', quizFive.view);
+app.get('/quizEnd', quizEnd.view);
 app.get('/meetNewPeople', meetNewPeople.view);
 app.get('/connect', connect.view)
 app.get('/events', events.view);
