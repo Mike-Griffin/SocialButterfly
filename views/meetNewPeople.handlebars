@@ -85,16 +85,16 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="index"><i class="fa fa-home fa-2x"></i></a>
-        <h2 align="center" class="navbar-text">Meet New People</h2>
+        <h2 align="center" class="navbar-text">Challenge Yourself</h2>
 
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Meet New People<span class="sr-only"></span></a></li>
-          <li><a href="connect"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Connect With Friends</a></li>
-          <li><a href="events"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>
+          <li class="active"><a href="#"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Challenge Yourself<span class="sr-only"></span></a></li>
+          <li><a href="connect"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Keep In Touch</a></li>
+        <!--  <li><a href="events"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li> -->
           <li><a href="settings"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
           <li><a href="faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
         </ul>
@@ -196,12 +196,12 @@
 <div class="modal fade" id="fail-save" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header" style="background-color:#F2354E">
+      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-        <h3 style="color: #FFFFFF" class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
+        <h3 style="color: #000000" class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
       </div>
       <div class="modal-body" align="center">
-        <h4>You haven't finished adding your goal. 
+        <h4>You haven't finished adding your goal.
 <br>
 <br>
           If you quit now, all data will be lost.</h4>
@@ -232,7 +232,7 @@
 
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" href="#{{statId}}{{level}}">{{level}}</a>
+          <a data-toggle="collapse" href="#{{statId}}{{level}}">{{level}} ({{difficultyPoints}} pts)</a>
         </h4>
       </div>
       <div id="{{statId}}{{level}}" class="panel-collapse collapse">
@@ -369,8 +369,10 @@
       $('#addedTask').delay(2000).queue(function(){
         $(this).addClass("list-hide");
       });
-
+      //expand all the menus
       $('.panel:nth-child(1)').find('a').trigger('click');
+      $('.panel:nth-child(2)').find('a').trigger('click');
+      $('.panel:nth-child(3)').find('a').trigger('click');
     });
 
     // for SUCCESSFULLY ADDING TASK -->

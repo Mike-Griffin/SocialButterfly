@@ -3,6 +3,7 @@
     "statusType": "active-list",
     "activity": [{
       "statId": "active",
+      "difficultyPoints": "25",
       "level": "Easy",
       "descriptions": [{
         "id": 1,
@@ -16,6 +17,7 @@
       }]
     }, {
       "statId": "active",
+      "difficultyPoints": "50",
       "level": "Medium",
       "descriptions": [{
         "id": 4,
@@ -26,6 +28,7 @@
       }]
     }, {
       "statId": "active",
+      "difficultyPoints": "100",
       "level": "Hard",
       "descriptions": [{
         "id": 6,
@@ -42,6 +45,7 @@
     "statusType": "completed-list",
     "activity": [{
       "statId": "completed",
+      "difficultyPoints": "25",
       "level": "Easy",
       "descriptions": [{
         "id": 9,
@@ -55,6 +59,7 @@
       }]
     }, {
       "statId": "completed",
+      "difficultyPoints": "50",
       "level": "Medium",
       "descriptions": [{
         "id": 12,
@@ -68,6 +73,7 @@
         }]
     }, {
       "statId": "completed",
+      "difficultyPoints": "100",
       "level": "Hard",
       "descriptions": [{
         "id": 15,
