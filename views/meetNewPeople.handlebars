@@ -18,56 +18,66 @@
   RAISED BUTTONS
   ************************/
 
-  .btn-primary.raised {
-    box-shadow: 0 3px 0 0 #007299;
-  }
+    .btn-primary.raised {
+      box-shadow: 0 3px 0 0 #007299;
+    }
 
-  .btn-primary.raised:active,
-  .btn-primary.raised.active {
-    background: #33a6cc;
-    box-shadow: none;
-    margin-bottom: -3px;
-    margin-top: 3px;
-  }
+    .btn-primary.raised:active,
+    .btn-primary.raised.active {
+      background: #33a6cc;
+      box-shadow: none;
+      margin-bottom: -3px;
+      margin-top: 3px;
+    }
     /***********************
   CUSTON BTN VALUES
   ************************/
 
-  .btn {
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+    .btn {
+      border: 0 none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-  .btn:focus,
-  .btn:active:focus,
-  .btn.active:focus {
-    outline: 0 none;
-  }
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus {
+      outline: 0 none;
+    }
 
-  .btn-primary {
-    background: #0099cc;
-    color: #ffffff;
-  }
+    .btn-primary {
+      background: #0099cc;
+      color: #ffffff;
+    }
 
-  .btn-primary:hover,
-  .btn-primary:focus,
-  .btn-primary:active,
-  .btn-primary.active,
-  .open > .dropdown-toggle.btn-primary {
-    background: #33a6cc;
-  }
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+      background: #33a6cc;
+    }
 
-  .btn-primary:active,
-  .btn-primary.active {
-    background: #007299;
-    box-shadow: none;
-  }
+    .btn-primary:active,
+    .btn-primary.active {
+      background: #007299;
+      box-shadow: none;
+    }
 
-  .list-group li {
-    list-style: none;
-  }
+    .list-group li {
+      list-style: none;
+    }
+    a[aria-expanded=true]::after {
+      content: "-";
+      display: inline-block;
+      margin-left: 5px;
+    }
+    a[aria-expanded=false]::after {
+      content: "+";
+      display: inline-block;
+      margin-left: 5px;
+    }
   </style>
 
 </head>
@@ -94,7 +104,7 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="#"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Challenge Yourself<span class="sr-only"></span></a></li>
           <li><a href="connect"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Keep In Touch</a></li>
-        <!--  <li><a href="events"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li> -->
+          <!--  <li><a href="events"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li> -->
           <li><a href="settings"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
           <li><a href="faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
         </ul>
@@ -108,253 +118,255 @@
     <a href="newActivity" class="btn btn-primary"><i class="fa fa-plus"></i></a>
   </div>
 -->
-<!--
+  <!--
 <div id = "addedTask">
   <p> You did it </p>
 </div>
 -->
 
-<div align="center">
-  <div class="points">
-    <h1> 453 POINTS </h1>
+  <div align="center">
+    <div class="points">
+      <h1> 453 POINTS </h1>
+    </div>
   </div>
-</div>
 
-<div align="center">
-  <p><a onclick="activeClicked()" href="#" id="active-button" class="btn btn-primary btn-md" role="button">Active goals</a> <a onclick="completedClicked()" id="completed-button" href="#" class="btn btn-default btn-md" role="button">Completed goals</a></p>
+  <div align="center">
+    <p><a onclick="activeClicked()" href="#" id="active-button" class="btn btn-primary btn-md" role="button">Active goals</a> <a onclick="completedClicked()" id="completed-button" href="#" class="btn btn-default btn-md" role="button">Completed goals</a></p>
 
 
-</div>
+  </div>
 
-<hr></hr>
+  <hr></hr>
 
-<div class="container">
-  <!-- TASK ADD Button trigger modal -->
-  <button id="add-new-button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
-    <span class="glyphicon glyphicon-plus"></span> Add New Goal
-  </button>
-</div>
+  <div class="container">
+    <!-- TASK ADD Button trigger modal -->
+    <button id="add-new-button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">
+      <span class="glyphicon glyphicon-plus"></span> Add New Goal
+    </button>
+  </div>
 
-<hr></hr>
+  <hr></hr>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="myModalLabel">New Goal
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="myModalLabel">New Goal
           <button type="button" class="btn btn-danger btn-default pull-right" data-toggle="modal" data-target="#fail-save"> <span class="glyphicon glyphicon-remove"></span> Close</button>
         </h2>
-      </div>
+        </div>
 
-      <!-- START OF TASK ADD MODAL BODY-->
+        <!-- START OF TASK ADD MODAL BODY-->
 
-      <div class="modal-body">
+        <div class="modal-body">
 
-        <div class="level-container" align="center">
-          <div class="level-title">
-            <label>
-              <p>Level</p>
-            </label>
-          </div>
-
-          <form action="meetNewPeople">
-            <div class="level-selector" form="levelform">
-              <select name="level-difficulty">
-                <option value="0">Easy</option>
-                <option value="1">Medium</option>
-                <option value="2">Hard</option>
-              </select>
-            </div>
-
-            <br>
-
-            <div class="activity-section">
+          <div class="level-container" align="center">
+            <div class="level-title">
               <label>
-                <p>Activity</p>
+                <p>Level</p>
               </label>
-              <input type="text" name="ActivityDescription" class="form-control" id="psw" placeholder="Enter new activity">
-              <br>
             </div>
+
+            <form action="meetNewPeople">
+              <div class="level-selector" form="levelform">
+                <select name="level-difficulty">
+                  <option value="0">Easy</option>
+                  <option value="1">Medium</option>
+                  <option value="2">Hard</option>
+                </select>
+              </div>
+
+              <br>
+
+              <div class="activity-section">
+                <label>
+                  <p>Activity</p>
+                </label>
+                <input type="text" name="ActivityDescription" class="form-control" id="psw" placeholder="Enter new activity">
+                <br>
+              </div>
           </div>
 
           <p>
             <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Add new goal</button>
           </p>
+          </form>
+
+        </div>
+
+        <!-- END OF TASK ADD MODAL BODY -->
         </form>
-
       </div>
-
-      <!-- END OF TASK ADD MODAL BODY -->
-    </form>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
   </div>
-  <!-- /.modal-content -->
-</div>
-<!-- /.modal-dialog -->
-</div>
 
-<!--START OF QUIT W/O SAVING MODAL-->
-<div class="modal fade" id="fail-save" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-        <h3 style="color: #000000" class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
-      </div>
-      <div class="modal-body" align="center">
-        <h4>You haven't finished adding your goal.
+  <!--START OF QUIT W/O SAVING MODAL-->
+  <div class="modal fade" id="fail-save" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+          <h3 style="color: #000000" class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h3>
+        </div>
+        <div class="modal-body" align="center">
+          <h4>You haven't finished adding your goal.
 <br>
 <br>
           If you quit now, all data will be lost.</h4>
+        </div>
+
+        <div class="modal-footer">
+          <a href="meetNewPeople" class="btn btn-default pull-left"> <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to active goals</a>
+
+          <button type="button" class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding goal</button>
+        </div>
+        </form>
+
       </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
 
-      <div class="modal-footer">
-        <a href="meetNewPeople" class="btn btn-default pull-left"> <span class="glyphicon glyphicon-arrow-left"></span> YES, go back to active goals</a>
+  </div>
+  <div id="push"></div>
 
-        <button type="button"  class="btn btn-primary pull-right" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-right"></span> NO, continue adding goal</button>
-      </div>
-    </form>
+  <!-- END OF QUIT W/O SAVING MODAL-->
 
-  </div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div>
+  <div class="panel-group" align="center">
+    {{#each status}}
+      <div id="{{statusType}}">
+        {{#each activity}}
 
-</div>
-<div id="push"></div>
+          <div class="panel panel-default">
 
-<!-- END OF QUIT W/O SAVING MODAL-->
-
-<div class="panel-group" align="center">
-  {{#each status}}
-  <div id="{{statusType}}">
-    {{#each activity}}
-
-    <div class="panel panel-default">
-
-      <div class="panel-heading">
-        <h4 class="panel-title">
+            <div class="panel-heading">
+              <h4 class="panel-title">
           <a data-toggle="collapse" href="#{{statId}}{{level}}">{{level}} ({{difficultyPoints}} pts)</a>
         </h4>
-      </div>
-      <div id="{{statId}}{{level}}" class="panel-collapse collapse">
-        <div class="easy-sublist">
-          <br>
-          {{#each descriptions}}
-<button data-toggle="modal" data-target="#completeActivityModal{{id}}" class = "btn complete-task-button"><i class="glyphicon glyphicon-unchecked"></i></button>
-          <div class="modal fade" id="completeActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h4>
-                </div>
-                <div class="modal-body">
-                  Are you sure you want to mark task as completed?
-                </div>
-                <div class="modal-footer">
-                  <form action = "meetNewPeople">
-                    <input type="hidden" name="idVal" value="{{id}}">
-                    <input type="hidden" name="ActivityDescription" value="{{name}}">
-                    <button type="submit" class="btn btn-primary pull-left">YES, mark as completed</button>
-                  </form>
-                  <a href="meetNewPeople">
-                    <button type="button" class="btn btn-default pull-right">NO, close window</button>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
-            {{name}}
-            <br>
-        <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary edit-button"> Edit </button>
-
-        &nbsp;
-
-        <div class="modal fade" id="editActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-                <h2 class="modal-title" id="myModalLabel">Edit Goal</h2>
-              </div>
-
-              <!-- START OF TASK ADD MODAL BODY-->
-
-              <div class="modal-body">
-
-                <div class="level-container" align="center">
-                  <div class="level-title">
-                    <label>
-                      <p>Level</p>
-                    </label>
-                  </div>
-                  <form action="meetNewPeople">
-                    <input type="hidden" name="idVal" value="{{id}}">
-
-                    <div class="level-selector" form="levelform">
-                      <select name="level-difficulty">
-                        <option value="0">Easy</option>
-                        <option value="1">Medium</option>
-                        <option value="2">Hard</option>
-                      </select>
-                    </div>
-
-                    <br>
-
-                    <div class="activity-section">
-                      <label>
-                        <p>Activity</p>
-                      </label>
-                      <input type="text" value="{{name}}" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
-                      <br>
+            <div id="{{statId}}{{level}}" class="panel-collapse collapse">
+              <div class="easy-sublist">
+                <br>
+                {{#each descriptions}}
+                  <button data-toggle="modal" data-target="#completeActivityModal{{id}}" class="btn complete-task-button"><i class="glyphicon glyphicon-unchecked"></i></button>
+                  <div class="modal fade" id="completeActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-remove-circle"></span> Wait!</h4>
+                        </div>
+                        <div class="modal-body">
+                          Are you sure you want to mark task as completed?
+                        </div>
+                        <div class="modal-footer">
+                          <form action="meetNewPeople">
+                            <input type="hidden" name="idVal" value="{{id}}">
+                            <input type="hidden" name="ActivityDescription" value="{{name}}">
+                            <button type="submit" class="btn btn-primary pull-left">YES, mark as completed</button>
+                          </form>
+                          <a href="meetNewPeople">
+                            <button type="button" class="btn btn-default pull-right">NO, close window</button>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  {{name}}
+                  <br>
+                  <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary edit-button"> Edit </button>
 
-                  <p>
-                    <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
-                  </p>
-                </form>
+                  &nbsp;
 
+                  <div class="modal fade" id="editActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Edit Goal</h2>
+                        </div>
+
+                        <!-- START OF TASK ADD MODAL BODY-->
+
+                        <div class="modal-body">
+
+                          <div class="level-container" align="center">
+                            <div class="level-title">
+                              <label>
+                                <p>Level</p>
+                              </label>
+                            </div>
+                            <form action="meetNewPeople">
+                              <input type="hidden"="idVal" value="{{id}}">
+
+                              <div class="level-selector" form="levelform">
+                                <select name="level-difficulty">
+                                  <option value="0">Easy</option>
+                                  <option value="1">Medium</option>
+                                  <option value="2">Hard</option>
+                                </select>
+                              </div>
+
+                              <br>
+
+                              <div class="activity-section">
+                                <label>
+                                  <p>Activity</p>
+                                </label>
+                                <input type="text" value="{{name}}" name="ActivityDescription" class="form-control" placeholder="Enter new activity">
+                                <br>
+                              </div>
+                          </div>
+
+                          <p>
+                            <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span> Save Changes</button>
+                          </p>
+                          </form>
+
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                  </div>
+
+                  <button data-toggle="modal" data-target="#deleteActivityModal{{id}}" class="btn btn-danger delete-button"> Delete </button>
+
+                  <div class="modal fade" id="deleteActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                          <h2 class="modal-title" id="myModalLabel">Are you sure you want to delete goal? </h2>
+
+                          <form action="meetNewPeople">
+                            <div class="modal-footer">
+                              <input type="hidden" name="idVal" value="{{id}}">
+                              <button type="submit" class="btn btn-default pull-left"> <span class="glyphicon glyphicon"></span> YES, delete goal</button>
+                          </form>
+                          <button type="button" class="btn btn-danger pull-right" data-dismiss="modal"> <span class="glyphicon glyphicont"></span> NO, go back to active goals</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr></hr>
+                {{/each}}
               </div>
-              <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-          </div>
-        </div>
-
-        <button data-toggle="modal" data-target="#deleteActivityModal{{id}}" class="btn btn-danger delete-button"> Delete </button>
-
-        <div class="modal fade" id="deleteActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-                <h2 class="modal-title" id="myModalLabel">Are you sure you want to delete goal? </h2>
-
-                <form action = "meetNewPeople">
-                  <div class="modal-footer">
-                    <input type="hidden" name="idVal" value="{{id}}">
-                    <button type="submit" class="btn btn-default pull-left"> <span class="glyphicon glyphicon"></span> YES, delete goal</button>
-                  </form>
-                  <button type="button"  class="btn btn-danger pull-right" data-dismiss="modal"> <span class="glyphicon glyphicont"></span> NO, go back to active goals</button>
-                </div>
-              </div>
+              <!-- Added edit/delete buttons -->
             </div>
           </div>
-        </div>
-
-        <hr></hr>
         {{/each}}
       </div>
-      <!-- Added edit/delete buttons -->
-    </div>
+    {{/each}}
+
   </div>
-  {{/each}}
-</div>
-{{/each}}
 
-</div>
-
-<script type="text/javascript">
+  <script type="text/javascript">
     // For ADDING NEW TASK-->
     var curList = 0;
 
@@ -367,7 +379,7 @@
       $("#myBtn").click(function() {
         $("#myNewActivity").modal();
       });
-      $('#addedTask').delay(2000).queue(function(){
+      $('#addedTask').delay(2000).queue(function() {
         $(this).addClass("list-hide");
       });
       //expand all the menus
@@ -408,9 +420,8 @@
 
 
     }
-
-    </script>
-<!--
+  </script>
+  <!--
     <div class="modal fade" id="myCheckModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -430,10 +441,10 @@
         </div>
       </div>
 -->
-      <script>
-      $('input:checkbox').change(function(){
-       $(this).is(':checked')?$('#myCheckModal').modal('show'):"";
-     });
-      </script>
+  <script>
+    $('input:checkbox').change(function() {
+      $(this).is(':checked') ? $('#myCheckModal').modal('show') : "";
+    });
+  </script>
 
-    </body>
+</body>
