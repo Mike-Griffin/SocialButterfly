@@ -58,6 +58,23 @@
     list-style: none;
   }
 
+  .panel-heading a::after {
+    content: "-";
+    display: inline-block;
+    float: right;
+  }
+
+  a[aria-expanded=true]::after {
+    content: "-";
+    display: inline-block;
+    float: right;
+  }
+  a[aria-expanded=false]::after {
+    content: "+";
+    display: inline-block;
+    float: right;
+  }
+
   </style>
 
 
