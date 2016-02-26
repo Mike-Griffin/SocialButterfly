@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    /***********************
+  /***********************
   RAISED BUTTONS
   ************************/
 
@@ -121,9 +121,14 @@
 </div>
 
 <div align="center">
-  <p><a onclick="activeClicked()" href="#" id="active-button" class="btn btn-primary btn-md" role="button">Active goals</a> <a onclick="completedClicked()" id="completed-button" href="#" class="btn btn-default btn-md" role="button">Completed goals</a></p>
-
-
+<div class="btn-group" data-toggle="buttons">
+  <a onclick="activeClicked()" href="#" id="active-button" class="btn btn-primary btn-md active" role="button">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Active goals
+  </a>
+  <a onclick="completedClicked()" id="completed-button" href="#" class="btn btn-primary btn-md" role="button">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Completed goals
+  </a>
+</div>
 </div>
 
 <hr></hr>
@@ -386,8 +391,8 @@
         curList = 1;
         $("#active-list").addClass("list-hide");
         $("#completed-list").removeClass("list-hide");
-        $("#active-button").removeClass("btn-primary");
-        $("#completed-button").addClass("btn-primary");
+        //$("#active-button").removeClass("btn-primary");
+        //$("#completed-button").addClass("btn-primary");
         $("#add-new-button").addClass("list-hide");
         //document.getElementById("completed-list").classList.remove("list-hide");
       }
@@ -401,8 +406,8 @@
         curList = 0;
         $("#active-list").removeClass("list-hide");
         $("#completed-list").addClass("list-hide");
-        $("#active-button").addClass("btn-primary");
-        $("#completed-button").removeClass("btn-primary");
+        //$("#active-button").addClass("btn-primary");
+        //$("#completed-button").removeClass("btn-primary");
         $("#add-new-button").removeClass("list-hide");
       }
 
