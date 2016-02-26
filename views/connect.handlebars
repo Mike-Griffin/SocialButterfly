@@ -255,6 +255,77 @@
           <button class="btn btn-warning" data-toggle="modal" data-target="#{{id}}update">
             Update Last Seen
           </button>
+
+          <div class="modal fade" id="{{id}}update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                  <h2 class="modal-title" id="{{name}}Update">Update Last Seen</h2>
+                </div>
+
+        <!-- THE OLD CODE <button class="btn btn-primary btn-block">
+          <a href="newConnect" class="btn btn-primary" data-ignore="push"><i class="fa fa-plus"> Add new friend </i></a>
+        </button>-->
+
+        <!-- START OF TASK ADD MODAL BODY-->
+        <div class="modal-body">
+          <div class="name-container" align="center">
+            <div class="name-title">
+              <form action="connect">
+                <input type="hidden" name="idVal" value="{{id}}"></input>
+
+
+
+          </div>
+
+          <br>
+
+          <div class="last-seen" align="center">
+            Haven't seen since: <input type="date" name="date">
+          </div>
+
+          <br>
+
+
+
+        <p>
+          <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block">Save changes</button>
+        </p>
+      </form>
+
+    </div>
+
+    <!-- END OF TASK ADD MODAL BODY -->
+  </form>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+
+
+<!--Modal for TASK ADD SUCCESS-->
+<div class="modal fade" id="task-success" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+        <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-ok-circle"></span> Success!</h3>
+      </div>
+      <div class="modal-body">
+        <p>Your friend has been added successfully.</p>
+      </div>
+
+      <!-- End of TASK ADD SUCCESS BODY-->
+
+      <div class="modal-footer">
+        <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to friends list</button>
+      </div>
+    </form>
+
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div>
+
+</div>
           <br>
           <br>
           <li class="list-group-item"><p>Goal is to see every {{goal}}</p>
