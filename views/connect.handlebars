@@ -270,12 +270,11 @@
     <div id='{{id}}' class="panel-collapse collapse in" aria-expanded="true">
       <ul class="list-group">
         <li class="list-group-item"><p>Haven't seen since</p>
-          {{date}}
-          <br>
-          <br>
+          <h4>{{date}}</h4>
           <button class="btn btn-warning" data-toggle="modal" data-target="#{{id}}update">
             Update Last Seen
           </button>
+          <br>
 
           <div class="modal fade" id="{{id}}update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
             <div class="modal-dialog">
