@@ -251,7 +251,7 @@
               <div class="easy-sublist">
                 <br>
                 {{#each descriptions}}
-                  <button data-toggle="modal" data-target="#completeActivityModal{{id}}" class="btn complete-task-button"><i class="glyphicon glyphicon-unchecked"></i></button>
+                  <button data-toggle="modal" data-target="#completeActivityModal{{id}}" class="btn btn-default complete-task-button"><i class="glyphicon glyphicon-unchecked"></i></button>
                   <div class="modal fade" id="completeActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -275,7 +275,7 @@
                       </div>
                     </div>
                   </div>
-                  &nbsp; {{name}}
+                  {{name}}
                   <br>
                   <br>
                   <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary edit-button"> Edit </button>
