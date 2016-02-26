@@ -128,3 +128,8 @@ a {
 #task-success {
   z-index: 1080 !important;
 }
+
+.whole-panel {
+  display: block;
+
+}
