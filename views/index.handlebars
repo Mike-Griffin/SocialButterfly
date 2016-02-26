@@ -53,9 +53,14 @@
 /***********************
   RAISED BUTTONS
   ************************/
-  .btn-primary.raised {
+  .btn-primary.raised, .btn-danger.raised, .btn-info.raised {
     box-shadow: 0 3px 0 0 #007299;
   }
+
+  .btn-danger.raised {
+    box-shadow: 0 3px 0 0 #B01525;
+  }
+
   .btn-primary.raised:active, .btn-primary.raised.active {
     background: #33a6cc;
     box-shadow: none;
@@ -147,6 +152,16 @@
                       </a>
                     </li>
                     <br>
+                    <br>
+                  <div align="center">
+                    <div class="points">
+                      <h1> 453 POINTS </h1>
+                    </div>
+                  </div>
+
+                                      <br>
+                                          <h4>YOU ARE CURRENTLY AT THE</h4>
+                      <h3>SOCIAL EXPERT LEVEL.</h3>
                     <!--
                     <br>
                     <li>
@@ -170,25 +185,18 @@
 
           <div class="container" align="center">
             <a href="/settings">
-              <button type="button" class="btn-small btn-primary btn-block raised"> SETTINGS </button>
+              <button type="button" class="btn-small btn-lg btn-primary raised pull-left"> SETTINGS </button>
+            </a>
+
+            <a href="/">
+              <button type="button" class="btn-small btn-lg btn-info raised pull-right"> HELP & FAQ </button>
             </a>
           </div>
 
           <br>
           <div class="container" align="center">
             <a href="/">
-              <button type="button" class="btn-small btn-info btn-block raised"> HELP & FAQ </button>
-            </a>
-          </div>
-
-          <br> 
-          <br>
-          <br>
-          <br>
-
-          <div class="container" align="center">
-            <a href="/">
-              <button type="button" class="btn btn-danger btn-block raised"> LOG OUT </button>
+              <button type="button" class="btn btn-lg btn-small btn-danger btn-block raised"> LOG OUT </button>
             </a>
           </div>
 

@@ -39,6 +39,15 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
+    .btn-sm {
+    padding: 15px 15px;
+    border: 0 none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
   }
@@ -74,33 +83,24 @@
             <div class="panel-info">
 
               <div class="card card-block">
-                <a href="quizIntro">
-                  <h4> Go Back to Intro </h4>
-                </a>
+
+                <div class="pull-left">
+                  <a href="quizIntro">
+                    <h4> Go Back to Intro </h4>
+                  </a>
+                </div>
+                <div class="pull-right">
+                  <a href="index">
+                    <h4> Skip All </h4>
+                  </a>
+                </div>
+                <br>
+                <br>
+
                 <div id="home-screen-text" class="container-fluid" align="center">
                   <h3> Rate how difficult this task would be for you to do.</h3>
-                  <h1>QUESTION</h1>
-
-                  <!-- BREAD CRUMBS -->
-                  <div class="container" align="center">
-                    <div class="btn-group" role="group" aria-label="...">
-                      <a href="quizOne">
-                        <button type="button" class="btn btn-default">1</button>
-                      </a>
-                      <a href="#">
-                        <button type="button" class="btn btn-default active">2</button>
-                      </a>
-                      <a href="quizThree">
-                        <button type="button" class="btn btn-default">3</button>
-                      </a>
-                      <a href="quizFour">
-                        <button type="button" class="btn btn-default">4</button>
-                      </a>
-                      <a href="quizFive">
-                        <button type="button" class="btn btn-default">5</button>
-                      </a>
-                    </div>
-                  </div>
+                  <hr>
+                  <h1>QUESTION TWO</h1>
 
                   <h2>Starting a conversation on the bus...</h2>
                 </div>
@@ -129,12 +129,30 @@
                       <button type="button" class="btn btn-primary btn-block raised"> NEXT QUESTION </button>
                     </a>
                   </div>
-                  <div align="center" style="color: #000000">
-                    <br>
-                    <a href="index">
-                      <h4> Skip All </h4>
-                    </a>
+
+                  <!-- BREAD CRUMBS -->
+                  <div class="container" align="center">
+                    <div class="btn-group" role="group" aria-label="...">
+                                                              <br>
+                                        <h4>GO TO QUESTION</h4>
+                      <a href="quizOne">
+                        <button type="button" class="btn btn-sm btn-default">1</button>
+                      </a>
+                      <a href="#">
+                        <button type="button" class="btn btn-sm btn-default active">2</button>
+                      </a>
+                      <a href="quizThree">
+                        <button type="button" class="btn btn-sm btn-default">3</button>
+                      </a>
+                      <a href="quizFour">
+                        <button type="button" class="btn btn-sm btn-default">4</button>
+                      </a>
+                      <a href="quizFive">
+                        <button type="button" class="btn btn-sm btn-default">5</button>
+                      </a>
+                    </div>
                   </div>
+
                 </form>
                 <br>
 
