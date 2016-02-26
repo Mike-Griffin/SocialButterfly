@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-
 /***********************
   RAISED BUTTONS
   ************************/
@@ -27,11 +26,9 @@
     margin-bottom: -3px;
     margin-top: 3px;
   }
-
 /***********************
   CUSTON BTN VALUES
   ************************/
-
   .btn {
     border: 0 none;
     font-weight: 700;
@@ -41,7 +38,6 @@
   .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
   }
-
   .btn-primary {
     background: #0099cc;
     color: #ffffff;
@@ -53,32 +49,24 @@
     background: #007299;
     box-shadow: none;
   }
-
   .list-group li {
     list-style: none;
   }
-
   .panel-heading a::after {
     content: "-";
     display: inline-block;
     float: right;
-    font-size: 125%;
   }
-
   a[aria-expanded=true]::after {
     content: "-";
     display: inline-block;
     float: right;
-    font-size: 125%;
   }
   a[aria-expanded=false]::after {
     content: "+";
     display: inline-block;
     float: right;
-    font-size:125%;
-
   }
-
   </style>
 
 
@@ -120,13 +108,6 @@
     </div>
   </div>-->
 
-
-  <div align="center">
-    <div class="points">
-      <h1> 453 POINTS </h1>
-    </div>
-  </div>
-  
   <hr></hr>
   <div class="container">
     <!-- TASK ADD button trigger modal -->
@@ -157,6 +138,12 @@
         <input type="text" name = "friend" class="form-control" id="psw" placeholder="Enter name of friend you want to catch up with">
       </input>
 
+    </div>
+
+    <br>
+
+    <div class="last-seen" align="center">
+      Haven't seen since: <input type="date" name="date">
     </div>
 
     <br>
@@ -268,7 +255,6 @@
         <a class="whole-panel" data-toggle="collapse" href='#{{id}}' >{{name}}</a>
       </h4>
     </div>
-
     <div id='{{id}}' class="panel-collapse collapse in" aria-expanded="true">
       <ul class="list-group">
         <li class="list-group-item"><p>Haven't seen since</p>
@@ -276,7 +262,6 @@
           <button class="btn btn-warning" data-toggle="modal" data-target="#{{id}}update">
             Update Last Seen
           </button>
-          <br>
 
           <div class="modal fade" id="{{id}}update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
             <div class="modal-dialog">
@@ -299,56 +284,58 @@
 
 
 
-              </div>
-
-              <br>
-
-              <div class="last-seen" align="center">
-                Haven't seen since: <input type="date" name="date">
-              </div>
-
-              <br>
-
-              <p>
-                <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block">Save changes</button>
-              </p>
-            </form>
-
           </div>
 
-          <!-- END OF TASK ADD MODAL BODY -->
-        </form>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+          <br>
 
-
-    <!--Modal for TASK ADD SUCCESS-->
-    <div class="modal fade" id="task-success" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-            <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-ok-circle"></span> Success!</h3>
-          </div>
-          <div class="modal-body">
-            <p>Your friend has been added successfully.</p>
+          <div class="last-seen" align="center">
+            Haven't seen since: <input type="date" name="date">
           </div>
 
-          <!-- End of TASK ADD SUCCESS BODY-->
+          <br>
 
-          <div class="modal-footer">
-            <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to friends list</button>
-          </div>
-        </form>
 
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>
+
+        <p>
+          <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block">Save changes</button>
+        </p>
+      </form>
+
+    </div>
+
+    <!-- END OF TASK ADD MODAL BODY -->
+  </form>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+
+
+<!--Modal for TASK ADD SUCCESS-->
+<div class="modal fade" id="task-success" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+        <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-ok-circle"></span> Success!</h3>
+      </div>
+      <div class="modal-body">
+        <p>Your friend has been added successfully.</p>
+      </div>
+
+      <!-- End of TASK ADD SUCCESS BODY-->
+
+      <div class="modal-footer">
+        <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to friends list</button>
+      </div>
+    </form>
+
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div>
 
 </div>
-<br>
-<br>
-<li class="list-group-item"><p>Goal is to see every {{goal}}</p>
+          <br>
+          <br>
+          <li class="list-group-item"><p>Goal is to see every {{goal}}</p>
             <!--
             <button href="editConnectModal" class="btn btn-primary"> Edit </button>
           -->
@@ -380,6 +367,12 @@
             </input>
 
           </div>
+
+          <br>
+
+          <!--<div class="last-seen" align="center">
+            Haven't seen since: <input type="date" name="date">
+          </div>-->
 
           <br>
 
@@ -477,13 +470,11 @@
 </div>
 </div>
 <br>
-
 <form action = "connect">
   <input type="hidden" name="idVal" value="{{id}}">
 
   <button type = "submit" class="btn btn-danger"> Delete </button>
 </form>
-
 </li>
 </ul>
 </div>
@@ -496,13 +487,10 @@
 $(document).ready(function(){
   $("#myBtn").click(function(){
     $("#myNewActivity").modal();
-  });
-
-  /* For SUCCESSFULLY ADDING TASK */
-  $('#btnCancel').click(function(){
-    $('#task-success').modal('toggle');
-  });
-
-  </script>
-
+    });
+/* For SUCCESSFULLY ADDING TASK */
+$('#btnCancel').click(function(){
+  $('#task-success').modal('toggle');
+});
+</script>
 </body>
