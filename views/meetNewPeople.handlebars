@@ -68,11 +68,13 @@
     .list-group li {
       list-style: none;
     }
+
     a[aria-expanded=true]::after {
       content: "-";
       display: inline-block;
       float: right;
     }
+
     a[aria-expanded=false]::after {
       content: "+";
       display: inline-block;
@@ -244,10 +246,10 @@
 
             <div class="panel-heading">
               <h4 class="panel-title">
-          <a data-toggle="collapse" href="#{{statId}}{{level}}">{{level}} ({{difficultyPoints}} pts)</a>
-        </h4>
+                <a data-toggle="collapse" href="#{{statId}}{{level}}">{{level}} ({{difficultyPoints}} pts)</a>
+              </h4>
             </div>
-            <div id="{{statId}}{{level}}" class="panel-collapse collapse">
+            <div id="{{statId}}{{level}}" class="panel-collapse collapse" aria-expanded="true">
               <div class="easy-sublist">
                 <br>
                 {{#each descriptions}}
