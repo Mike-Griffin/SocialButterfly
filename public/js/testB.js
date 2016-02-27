@@ -9,11 +9,14 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$(".submitBtn").click(clickSubmit);
+	$(".addBtn").click(clickAdd);
+	$(".glyphicon-unchecked").click(clickComplete);
 }
 
-function clickSubmit(e) {
-	e.preventDefault();
+function clickAdd(e) {
+	ga("send", "event", 'add', 'click');
+}
 
-	ga("send", "event", 'submit', 'click');
+function clickComplete(e) {
+	ga("send", "event", 'complete', 'click');
 }
