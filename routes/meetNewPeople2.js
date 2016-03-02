@@ -79,5 +79,5 @@ exports.view = function(req, res) {
     });
   }
 
-  res.render('meetNewPeople', data);
+  res.render('meetNewPeople2', data);
 };
