@@ -14,31 +14,91 @@
       }, {
         "id": 3,
         "name": "Compliment a stranger"
+      }, {
+        "id": 4,
+        "name": "Give someone a high five"
+      }, {
+        "id": 5,
+        "name": "Smile at somebody you don't know"
+      }, {
+        "id": 6,
+        "name": "Sit at the front of class"
+      }, {
+        "id": 7,
+        "name": "Speak with the professor"
       }]
     }, {
       "statId": "active",
       "difficultyPoints": "50",
       "level": "Medium",
       "descriptions": [{
-        "id": 4,
+        "id": 8,
         "name": "Go to a club meeting"
       }, {
-        "id": 5,
+        "id": 9,
         "name": "Start a conversation on the bus"
+      }, {
+        "id": 10,
+        "name": "Introduce yourself to someone first"
+      }, {
+        "id": 11,
+        "name": "Get a different kind of haircut"
+      }, {
+        "id": 12,
+        "name": "Tell a funny joke"
+      }, {
+        "id": 13,
+        "name": "Volunteer for a new cause"
+      }, {
+        "id": 14,
+        "name": "Help someone in need"
+      }, {
+        "id": 15,
+        "name": "Maintain eye contact when talking to someone new"
+      }, {
+        "id": 16,
+        "name": "Raise your hand in lecture"
+      }, {
+        "id": 17,
+        "name": "Ask someone or a friend for advice"
       }]
     }, {
       "statId": "active",
       "difficultyPoints": "100",
       "level": "Hard",
       "descriptions": [{
-        "id": 6,
+        "id": 18,
         "name": "Ask for someone's phone number"
       }, {
-        "id": 7,
+        "id": 19,
         "name": "Sing karaoke"
       }, {
-        "id": 8,
+        "id": 20,
         "name": "Meet someone new in an unfamiliar place"
+      }, {
+        "id": 21,
+        "name": "Go out to lunch with a new friends"
+      }, {
+        "id": 22,
+        "name": "Ask a classmate to study together"
+      }, {
+        "id": 23,
+        "name": "Initiate a group hangout with new friends"
+      }, {
+        "id": 24,
+        "name": "Try out for a sports team"
+      }, {
+        "id": 25,
+        "name": "Go to a semi-formal"
+      }, {
+        "id": 26,
+        "name": "Say your honest opinion about something"
+      }, {
+        "id": 27,
+        "name": "Confess to someone"
+      }, {
+        "id": 28,
+        "name": "Host a dinner with all your new friends"
       }]
     }]
   }, {
@@ -48,13 +108,13 @@
       "difficultyPoints": "25",
       "level": "Easy",
       "descriptions": [{
-        "id": 9,
+        "id": 29,
         "name": "Say Thank you to the bus driver as you get off from the back"
       }, {
-        "id": 10,
+        "id": 30,
         "name": "Ask to borrow a pencil"
       }, {
-        "id": 11,
+        "id": 31,
         "name": "Sit next to someone different in class"
       }]
     }, {
@@ -62,13 +122,13 @@
       "difficultyPoints": "50",
       "level": "Medium",
       "descriptions": [{
-        "id": 12,
+        "id": 32,
         "name": "Go to professor's office hours"
       }, {
-        "id": 13,
+        "id": 33,
         "name": "Buy a new friend a cup of coffee"
       }, {
-        "id": 14,
+        "id": 34,
         "name": "Add a friend on social media"
         }]
     }, {
@@ -76,10 +136,10 @@
       "difficultyPoints": "100",
       "level": "Hard",
       "descriptions": [{
-        "id": 15,
+        "id": 35,
         "name": "Go to a house party"
       }, {
-        "id": 16,
+        "id": 36,
         "name": "Get rejected"
       }]
     }]
