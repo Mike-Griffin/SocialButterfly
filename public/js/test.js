@@ -15,10 +15,12 @@ function initializePage() {
 
 function clickComplete(e) {
 	ga("send", "event", 'add', 'click');
+	console.log("complete");
 
 }
   
 function clickEdit(e) {
 	ga('send', "event", 'edit', 'click');
+    console.log("edit");
 }
 
