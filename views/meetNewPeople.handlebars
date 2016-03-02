@@ -4,6 +4,7 @@
 <head>
 
 <!-- Google Analytics Content Experiment code -->
+
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='117469581-2',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
@@ -320,7 +321,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                               </label>
                             </div>
                             <form action="meetNewPeople">
-                              <input type="hidden"="idVal" value="{{id}}">
+                              <input type="hidden" name="idVal" value="{{id}}">
 
                               <div class="level-selector" form="levelform">
                                 <select name="level-difficulty">
@@ -390,6 +391,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     // For ADDING NEW TASK-->
     var curList = 0;
     $(document).ready(function() {
+      var url = "http://socialbutterflies.herokuapp.com/meetNewPeople"
+      window.location.replace (url);
       $("#completed-list").addClass("list-hide");
       $("#completed-list .list-checkbox").addClass("list-hide");
       $("#completed-list .edit-button").addClass("list-hide");
