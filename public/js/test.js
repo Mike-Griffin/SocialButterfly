@@ -10,7 +10,7 @@ $(document).ready(function() {
  */
 function initializePage() {
 	$(".edit-button").click(clickEdit);
-	$(".glyphicon-unchecked").click(clickComplete);
+	$(".complete-goal-button").click(clickComplete);
 }
 
 function clickComplete(e) {
@@ -21,3 +21,4 @@ function clickComplete(e) {
 function clickEdit(e) {
 	ga('send', "event", 'edit', 'click');
 }
+

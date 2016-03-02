@@ -247,7 +247,7 @@
               <div class="easy-sublist">
                 <br>
                 {{#each descriptions}}
-                  <button data-toggle="modal" data-target="#completeActivityModal{{id}}" class="btn btn-default complete-task-button"><i class="glyphicon glyphicon-ok"></i></button>
+                  <button data-toggle="modal" data-target="#completeActivityModal{{id}}" class="btn btn-default complete-task-button"><i class="complete-goal-button glyphicon glyphicon-ok"></i></button>
                   <div class="modal fade" id="completeActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -434,5 +434,19 @@
       $(this).is(':checked') ? $('#myCheckModal').modal('show') : "";
     });
   </script>
+
+  
+  {{> test}}
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74356653-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
