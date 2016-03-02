@@ -72,7 +72,7 @@ exports.view = function(req, res) {
 
   else if (difficulty !== undefined && desc !== undefined) {
     var id =  Math.floor((Math.random() * 10000) + 1);
-
+console.log("insert2"); 
     data.status[0].activity[Number(difficulty)].descriptions.push({
       'id': id,
       'name': desc

@@ -72,12 +72,22 @@ exports.view = function(req, res) {
 
   else if (difficulty !== undefined && desc !== undefined) {
     var id =  Math.floor((Math.random() * 10000) + 1);
-
+console.log("insert"); 
     data.status[0].activity[Number(difficulty)].descriptions.push({
       'id': id,
       'name': desc
     });
   }
 
-  res.render('meetNewPeople', data);
+  /*
+var random_num = Math.random();
+
+  if (random_num > 0.5) {
+    res.render('meetNewPeople', data);
+  } else {
+    res.render('meetNewPeople2', data);
+  }
+  */
+
+    res.render('meetNewPeople', data);
 };
