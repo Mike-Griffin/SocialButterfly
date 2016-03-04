@@ -12,7 +12,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <!-- Include the compiled Ratchet CSS -->
-  <link href="css/ratchet.css" rel="stylesheet">
+  <!--<link href="css/ratchet.css" rel="stylesheet">-->
 
   <style type="text/css">
   .back-link a {
@@ -154,11 +154,16 @@
                     </li>
                     <br>
                     <br>
-                  <div align="center">
-                    <div class="points">
-                      <h1> 453 POINTS </h1>
+
+                    {{#each status}}
+                    <div align="center" id="{{statusType}}points">
+                      <div class="points">
+                        <h1> {{points}} points </h1>
+                      </div>
                     </div>
-                  </div>
+                    {{/each}}
+
+
 
                                       <br>
                                           <h4>YOU ARE CURRENTLY AT THE</h4>
@@ -207,6 +212,12 @@
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
       <script src="js/main.js"></script>
+
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $("#completed-listpoints").addClass("hide");
+        });
+      </script>
 
     </body>
   </div>

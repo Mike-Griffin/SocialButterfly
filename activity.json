@@ -1,5 +1,6 @@
 {
   "status": [{
+    "points": "0",
     "statusType": "active-list",
     "activity": [{
       "statId": "active",
@@ -102,6 +103,7 @@
       }]
     }]
   }, {
+    "points": "0",
     "statusType": "completed-list",
     "activity": [{
       "statId": "completed",

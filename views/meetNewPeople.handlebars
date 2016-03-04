@@ -139,12 +139,13 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   <p> You did it </p>
 </div>
 -->
-
-  <div align="center">
+  {{#each status}}
+  <div align="center" id="{{statusType}}points">
     <div class="points">
-      <h1> 453 POINTS </h1>
+      <h1> {{points}} points</h1>
     </div>
   </div>
+  {{/each}}
 
 <div align="center">
 <div class="btn-group" data-toggle="buttons">
@@ -287,6 +288,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                           <form action="meetNewPeople">
                             <input type="hidden" name="idVal" value="{{id}}">
                             <input type="hidden" name="ActivityDescription" value="{{name}}">
+                            <input type="hidden" name="totalPoints" value = "{{../../points}}">
+                            <input type="hidden" name="difficultyPoints" value = "{{../difficultyPoints}}">
                             <button type="submit" class="btn btn-primary pull-left">YES, mark as completed</button>
                           </form>
                           <a href="meetNewPeople">
@@ -394,16 +397,17 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     $(document).ready(function() {
       var url = "http://socialbutterflies.herokuapp.com/meetNewPeople"
     //  window.location.replace (url);
-      $("#completed-list").addClass("list-hide");
-      $("#completed-list .list-checkbox").addClass("list-hide");
-      $("#completed-list .edit-button").addClass("list-hide");
-      $("#completed-list .delete-button").addClass("list-hide");
-      $("#completed-list .complete-task-button").addClass("list-hide");
+      $("#completed-list").addClass("hide");
+      $("#completed-list .list-checkbox").addClass("hide");
+      $("#completed-list .edit-button").addClass("hide");
+      $("#completed-list .delete-button").addClass("hide");
+      $("#completed-list .complete-task-button").addClass("hide");
+      $("#completed-listpoints").addClass("hide");
       $("#myBtn").click(function() {
         $("#myNewActivity").modal();
       });
       $('#addedTask').delay(2000).queue(function() {
-        $(this).addClass("list-hide");
+        $(this).addClass("hide");
       });
       //expand all the menus
       $('.panel:nth-child(1)').find('a').trigger('click');
@@ -417,22 +421,22 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     function completedClicked() {
       if (curList === 0) {
         curList = 1;
-        $("#active-list").addClass("list-hide");
-        $("#completed-list").removeClass("list-hide");
+        $("#active-list").addClass("hide");
+        $("#completed-list").removeClass("hide");
         //$("#active-button").removeClass("btn-primary");
         //$("#completed-button").addClass("btn-primary");
-        $("#add-new-button").addClass("list-hide");
+        $("#add-new-button").addClass("hide");
         //document.getElementById("completed-list").classList.remove("list-hide");
       }
     }
     function activeClicked() {
       if (curList === 1) {
         curList = 0;
-        $("#active-list").removeClass("list-hide");
-        $("#completed-list").addClass("list-hide");
+        $("#active-list").removeClass("hide");
+        $("#completed-list").addClass("hide");
         //$("#active-button").addClass("btn-primary");
         //$("#completed-button").removeClass("btn-primary");
-        $("#add-new-button").removeClass("list-hide");
+        $("#add-new-button").removeClass("hide");
       }
     }
   </script>
