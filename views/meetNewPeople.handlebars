@@ -4,7 +4,7 @@
 <head>
 
 <!-- Google Analytics Content Experiment code -->
-
+<!--
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='117469581-2',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
@@ -17,6 +17,7 @@ length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
 valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 </script><script>utmx('url','A/B');</script>
+-->
 <!-- End of Google Analytics Content Experiment code -->
 
 
@@ -298,7 +299,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                   {{name}}
                   <br>
                   <br>
-                  <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary edit-button"> Edit </button>
+                  <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary btn-xs edit-button"> Edit </button>
 
                   &nbsp;
 
@@ -354,7 +355,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                     </div>
                   </div>
 
-                  <button data-toggle="modal" data-target="#deleteActivityModal{{id}}" class="btn btn-danger delete-button"> Delete </button>
+                  <button data-toggle="modal" data-target="#deleteActivityModal{{id}}" class="btn btn-danger btn-xs delete-button"> Delete </button>
 
                   <div class="modal fade" id="deleteActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
                     <div class="modal-dialog">
@@ -460,7 +461,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
       $(this).is(':checked') ? $('#myCheckModal').modal('show') : "";
     });
   </script>
-
+<!--
   {{> test}}
 
   <script>
@@ -473,5 +474,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   ga('send', 'pageview');
 
 </script>
+-->
 
 </body>
