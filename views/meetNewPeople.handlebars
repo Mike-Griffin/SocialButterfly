@@ -100,7 +100,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 <body>
   {{!-- <div class="content-placeholder"></div> --}}
-  
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -126,7 +126,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
       </div>
     </div>
- 
+
   </nav>
   <!-- /.navbar-collapse -->
   <!--
@@ -301,12 +301,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                     </div>
                   </div>
                   {{name}}
-                  <br>
-                  <br>
+
+                  <div class="delete-and-edit">
+
 
                   <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary btn-xs edit-button"> Edit </button>
 
-                  &nbsp;
 
                   <div class="modal fade" id="editActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
                     <div class="modal-dialog">
@@ -361,7 +361,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                   </div>
 
                   <button data-toggle="modal" data-target="#deleteActivityModal{{id}}" class="btn btn-danger btn-xs delete-button"> Delete </button>
-
+                </div>
                   <div class="modal fade" id="deleteActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -401,8 +401,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     //  window.location.replace (url);
       $("#completed-list").addClass("hide");
       $("#completed-list .list-checkbox").addClass("hide");
-      $("#completed-list .edit-button").addClass("hide");
-      $("#completed-list .delete-button").addClass("hide");
+      $('#completed-list .delete-and-edit').addClass("hide");
+      //$("#completed-list .edit-button").addClass("hide");
+      //$("#completed-list .delete-button").addClass("hide");
       $("#completed-list .complete-task-button").addClass("hide");
       $("#completed-listpoints").addClass("hide");
       $("#myBtn").click(function() {
