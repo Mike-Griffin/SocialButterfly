@@ -100,33 +100,33 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 <body>
   {{!-- <div class="content-placeholder"></div> --}}
-  <nav class="navbar navbar-default">
+  
+<nav class="navbar navbar-default">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+      -->
         <a class="navbar-brand" href="index"><i class="fa fa-home fa-2x"></i></a>
         <h2 align="center" class="navbar-text">Challenge Yourself</h2>
 
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Challenge Yourself<span class="sr-only"></span></a></li>
           <li><a href="connect"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Keep In Touch</a></li>
-          <!--  <li><a href="events"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li> -->
           <li><a href="settings"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
           <li><a href="faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
         </ul>
 
       </div>
     </div>
+ 
   </nav>
   <!-- /.navbar-collapse -->
   <!--
@@ -139,6 +139,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   <p> You did it </p>
 </div>
 -->
+
   {{#each status}}
   <div align="center" id="{{statusType}}points">
     <div class="points">
@@ -302,6 +303,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
                   {{name}}
                   <br>
                   <br>
+
                   <button data-toggle="modal" data-target="#editActivityModal{{id}}" class="btn btn-primary btn-xs edit-button"> Edit </button>
 
                   &nbsp;
