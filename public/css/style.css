@@ -60,6 +60,10 @@ a {
   margin-right:10px;
 }
 
+.navbar-brand {
+  position:absolute;
+}
+
 #calendar {
   z-index:1;
   position:absolute;
