@@ -40,6 +40,13 @@ a {
   margin-top:25px;
 }
 
+.btn-xs {
+    padding: 5px 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
 .points {
   background-color: grey;
   width:50%;
