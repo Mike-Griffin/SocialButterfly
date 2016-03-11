@@ -86,24 +86,24 @@
         </button>
       -->
 
-        <a class="navbar-brand" href="index"><i class="fa fa-home fa-2x"></i></a>
+      <a class="navbar-brand" href="index"><i class="fa fa-home fa-2x"></i></a>
 
-        <h2 align="center" class="navbar-text">Keep in Touch</h2>
-      </div>
+      <h2 align="center" class="navbar-text">Keep in Touch</h2>
+    </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="meetNewPeople"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Challenge Yourself<span class="sr-only"></span></a></li>
-          <li class="active"><a href="#"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Keep In Touch</a></li>
-          <!--<li><a href="events"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>-->
-          <li><a href="settings"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
-          <li><a href="faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
-        </ul>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="meetNewPeople"><i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Challenge Yourself<span class="sr-only"></span></a></li>
+        <li class="active"><a href="#"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Keep In Touch</a></li>
+        <!--<li><a href="events"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Go To Events</a></li>-->
+        <li><a href="settings"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
+        <li><a href="faq"><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;Help and FAQ</a></li>
+      </ul>
 
-      </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+</div>
 
  <!-- <div align = "center">
     <div class = "points">
@@ -287,58 +287,58 @@
 
 
 
+              </div>
+
+              <br>
+
+              <div class="last-seen" align="center">
+                Haven't seen since: <input type="date" name="date">
+              </div>
+
+              <br>
+
+
+
+              <p>
+                <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block">Save changes</button>
+              </p>
+            </form>
+
           </div>
 
-          <br>
+          <!-- END OF TASK ADD MODAL BODY -->
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
 
-          <div class="last-seen" align="center">
-            Haven't seen since: <input type="date" name="date">
+
+    <!--Modal for TASK ADD SUCCESS-->
+    <div class="modal fade" id="task-success" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+            <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-ok-circle"></span> Success!</h3>
+          </div>
+          <div class="modal-body">
+            <p>Your friend has been added successfully.</p>
           </div>
 
-          <br>
+          <!-- End of TASK ADD SUCCESS BODY-->
 
+          <div class="modal-footer">
+            <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to friends list</button>
+          </div>
+        </form>
 
-
-        <p>
-          <button type="submit" href="#" data-toggle="modal" data-target="#task-success" class="btn btn-info btn-block">Save changes</button>
-        </p>
-      </form>
-
-    </div>
-
-    <!-- END OF TASK ADD MODAL BODY -->
-  </form>
-</div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-
-
-<!--Modal for TASK ADD SUCCESS-->
-<div class="modal fade" id="task-success" tabindex="-1" role="dialog" aria-labelledby="task-success-title" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
-        <h3 class="modal-title" id="task-success-title"><span class="glyphicon glyphicon-ok-circle"></span> Success!</h3>
-      </div>
-      <div class="modal-body">
-        <p>Your friend has been added successfully.</p>
-      </div>
-
-      <!-- End of TASK ADD SUCCESS BODY-->
-
-      <div class="modal-footer">
-        <button type="button"  class="btn btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-arrow-left"></span> Go back to friends list</button>
-      </div>
-    </form>
-
-  </div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
 
 </div>
-          <br>
-          <br>
-          <li class="list-group-item"><p>Goal is to see every {{goal}}</p>
+<br>
+<br>
+<li class="list-group-item"><p>Goal is to see every {{goal}}</p>
             <!--
             <button href="editConnectModal" class="btn btn-primary"> Edit </button>
           -->
@@ -475,11 +475,34 @@
 </div>
 </div>
 <br>
-<form action = "connect">
-  <input type="hidden" name="idVal" value="{{id}}">
+<!-- <form action = "connect"> -->
+<!-- <input type="hidden" name="idVal" value="{{id}}"> -->
+<button data-toggle="modal" data-target="#deleteActivityModal{{id}}" class="btn btn-danger btn-xs delete-button"> Delete </button>
 
-  <button type = "submit" class="btn btn-danger btn-xs"> Delete </button>
-</form>
+</div>
+
+<!-- DELETE MODAL -->
+<div class="modal fade" id="deleteActivityModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+        <h2 class="modal-title" id="myModalLabel">Are you sure you want to delete friend? </h2>
+
+        <form action="connect">
+          <div class="modal-footer">
+            <input type="hidden" name="idVal" value="{{id}}"> 
+            <button type="submit" class="btn btn-danger pull-left"> <span class="glyphicon glyphicon"></span> YES, delete friend</button>
+          </form>
+          <button type="button" class="btn btn-default pull-right" data-dismiss="modal"> <span class="glyphicon glyphicont"></span> NO, go back to friends list</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END OF DELETE MODAL -->
+
+
+<!-- </form> -->
 </li>
 </ul>
 </div>
@@ -492,10 +515,10 @@
 $(document).ready(function(){
   $("#myBtn").click(function(){
     $("#myNewActivity").modal();
-    });
-/* For SUCCESSFULLY ADDING TASK */
-$('#btnCancel').click(function(){
-  $('#task-success').modal('toggle');
-});
-</script>
+  });
+  /* For SUCCESSFULLY ADDING TASK */
+  $('#btnCancel').click(function(){
+    $('#task-success').modal('toggle');
+  });
+  </script>
 </body>
